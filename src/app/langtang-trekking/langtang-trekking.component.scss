@@ -1,0 +1,140 @@
+/* langtang trekking booking section */
+
+svg[_ngcontent-c7] {
+    width: 100%;
+}
+
+image[_ngcontent-c7] {
+    height: 563px;
+    width: 574px;
+}
+
+.alpha-mask {
+    transform: translateY(-20px);
+}
+
+.alpha-mask .target {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.alpha-mask .alpha-target {
+    -webkit-mask-image: url(../../assets/img/mask.png);
+    mask-image: url(../../assets/img/mask.png);
+    mask-mode: alpha;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 80%;
+    mask-size: 80%;
+    width: 100%;
+    height: 100vh;
+    -webkit-mask-position: center center;
+    -webkit-mask-size: contain;
+}
+
+.row.booking-detail {
+    position: relative;
+    max-width: 480px;
+    background: #fff;
+    top: 0;
+    right: 0;
+    padding: 30px 20px 20px 30px;
+    border-radius: 8px;
+    transform: translateY(0%);
+    box-shadow: 0px 0px 10px -2px rgba(153, 135, 135, 1);
+}
+
+.row.booking-detail :nth-child(4) {
+    margin: 0;
+}
+
+.row.booking-detail .row a {
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+    transition: all 0.4s ease;
+}
+
+.row.booking-detail .row a:hover {
+    box-shadow: 0px 4px 10px -7px rgba(0, 0, 0, 1);
+}
+
+h1.cost {
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 74px;
+    margin: 10px 10px 10px 0 !important;
+}
+
+.btn6,
+.btn6:link,
+.btn6:visited {
+    padding: 16px 25px;
+    color: #333;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.row.booking-detail .intro-heading {
+    font-size: 26px;
+    font-weight: 700;
+    padding: 0;
+}
+
+.booking .intro-heading span {
+    font-weight: 500;
+    font-size: 16px;
+    display: block;
+    margin: 10px 0;
+}
+
+.row.booking-detail .row {
+    margin: 5px 0;
+    padding-left: 0;
+}
+
+.booking ul.wrapper {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.booking ul.wrapper li {
+    padding: 20px;
+    display: block;
+}
+
+.booking ul.wrapper li:nth-child(1) {
+    padding-left: 0;
+}
+
+.booking ul.wrapper i.fas {
+    margin: 10px 0;
+    display: block;
+    font-size: 28px;
+    color: #21b5ff;
+}
+
+@media (max-width: 320px) {
+    .booking .row.booking-detail .row.col-lg-10 {
+        display: block !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .alpha-mask {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .row.booking-detail {
+        position: absolute;
+        top: 50%;
+        right: 50px;
+        transform: translateY(-50%);
+    }
+}

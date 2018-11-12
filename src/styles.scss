@@ -1,1 +1,88 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900');
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    position: relative;
+}
+
+.btn-xl {
+    font-size: 15px;
+    padding: 15px 40px;
+    margin: 20px 0;
+    box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+    transition: all 0.4s ease;
+}
+
+.btn-xl:hover {
+    box-shadow: 0px 4px 10px -7px rgba(0, 0, 0, 1);
+}
+
+.mbr-black {
+    color: #000;
+}
+
+a.mbr-black {
+    transition: all 0.2s ease-in-out;
+    transform-origin: center;
+}
+
+a.mbr-black:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.no-padding {
+    padding: 0px !important;
+}
+
+.p-r-40 {
+    padding-right: 40px !important;
+}
+
+.m-b-20 {
+    margin-bottom: 20px;
+}
+
+.p-b-5 {
+    padding-bottom: 5px !important;
+}
+
+.p-t-15 {
+    padding-top: 45px !important;
+}
+
+.p-b-25 {
+    padding-bottom: 55px !important;
+}
+
+.m-b-30 {
+    margin-bottom: 30px !important;
+}
+
+.block-title {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.bg-primarycolor {
+    background: #21b5ff;
+}
+
+.mbr-white {
+    color: #fff;
+}
+
+.mr-auto,
+.container .row {
+    margin: 0 auto;
+}

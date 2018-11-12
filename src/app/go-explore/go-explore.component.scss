@@ -1,0 +1,90 @@
+/* go-explore section */
+
+.explore {
+    position: relative;
+}
+
+.explore .explore-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../../assets/img/go-explore-bg.png') center center no-repeat;
+    background-size: cover;
+    opacity: 0.27;
+    z-index: -1;
+}
+
+.explore .intro-heading {
+    font-weight: 700;
+}
+
+.explore .row .img {
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    background: #333;
+    height: 220px;
+}
+
+.explore .row .cta-btn {
+    position: relative;
+    margin-top: -48px;
+}
+
+.explore .row .wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 15px auto;
+    box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+    background: #fff;
+    line-height: 1.4;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 0;
+    flex: 0 0 30%;
+    max-width: 30%;
+    transition: all 0.4s ease;
+    transform-origin: center;
+}
+
+.explore .row .wrapper:hover {
+    transform: scale(1.1);
+}
+
+.explore .img.everest img {
+    position: relative;
+    height: 100%;
+    transition: all 0.4s ease;
+    transform-origin: center;
+}
+
+.explore .row .wrapper:hover div>img {
+    transform: scale(1.1);
+}
+
+.explore .block-title {
+    font-size: 17px;
+}
+
+.explore .wrapper .description {
+    padding: 10px;
+}
+
+.explore .wrapper .description p {
+    padding: 0 20px;
+    display: -webkit-box;
+    font-size: 16px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+    .explore .row .wrapper {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+}

@@ -1,0 +1,224 @@
+/* contactus section */
+
+.contactus {
+    position: relative;
+}
+
+.curve-bg {
+    position: relative;
+    padding: 25px;
+}
+
+.contactus-bg {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../../assets/img/contactus.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    -webkit-clip-path: ellipse(90% 90% at 50% 0%);
+    clip-path: ellipse(90% 90% at 50% 0%);
+    -webkit-shape-outside: ellipse(90% 90% at 50% 0%);
+    shape-outside: ellipse(90% 90% at 50% 0%);
+    -webkit-shape-margin: 2em;
+    shape-margin: 2em;
+    opacity: 1;
+    z-index: -1;
+}
+
+.contactus-bg::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 1);
+    opacity: 0.3;
+}
+
+.contactus .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0px auto 20px;
+    background: #fff;
+}
+
+.contactus ul.wrapper li .wrapper {
+    margin: 10px;
+}
+
+.contactus ul.wrapper {
+    display: block;
+    margin: 0 auto;
+}
+
+.contactus ul.wrapper li {
+    list-style: none;
+    margin: 30px 0;
+    display: block;
+    text-align: center;
+    max-width: 100%;
+}
+
+.contactus .icon {
+    margin: 10px;
+}
+
+.contactus i {
+    font-size: 45px;
+}
+
+.contactus h3 {
+    text-align: center;
+    font-weight: 700;
+}
+
+.contactus .heading {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.contactus .description {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.contactus span {
+    display: block;
+}
+
+.contactus .description a {
+    display: block;
+    color: #212529;
+}
+
+.location-img {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.row.contact,
+.row.social {
+    margin: 0 0 3em !important;
+}
+
+ul.social-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+ul.social-container li {
+    margin: 10px;
+    list-style: none;
+    font-size: 24px;
+}
+
+ul.social-container li a {
+    width: 70px;
+    padding: 16px 0;
+    display: block;
+    color: #fff;
+    border: 2px solid #21b5ff;
+    border-radius: 50%;
+}
+
+ul.social-container li a i {
+    transition: all 0.4s ease;
+}
+
+ul.social-container li a {
+    transition: all 0.4s ease;
+}
+
+ul.social-container li a:hover i {
+    color: #fff;
+}
+
+ul.social-container li i {
+    font-size: 26px;
+    color: #333;
+}
+
+.location-mark {
+    margin: 3em 0 0!important;
+}
+
+.location-img img {
+    width: 90px;
+}
+
+ul.social-container li:nth-child(1) a:hover {
+    background: #3b5998;
+    border-color: #3b5998;
+}
+
+ul.social-container li:nth-child(2) a:hover {
+    background: #db4437;
+    border-color: #db4437;
+}
+
+ul.social-container li:nth-child(3) a:hover {
+    background: #1da1f2;
+    border-color: #1da1f2;
+}
+
+ul.social-container li:nth-child(4) a:hover {
+    background: #ff0000;
+    border-color: #ff0000;
+}
+
+ul.social-container li:nth-child(5) a:hover {
+    background: #007bb5;
+    border-color: #007bb5;
+}
+
+ul.social-container li:nth-child(6) a:hover {
+    background: #1b1a19;
+    border-color: #1b1a19;
+}
+
+ul.social-container li:nth-child(7) a:hover {
+    background: #05cc47;
+    border-color: #05cc47;
+}
+
+@media (max-width: 480px) {
+    .contactus-bg {
+        -webkit-clip-path: ellipse(140% 90% at 50% 0%);
+        clip-path: ellipse(140% 90% at 50% 0%);
+        -webkit-shape-outside: ellipse(140% 90% at 50% 0%);
+        shape-outside: ellipse(140% 90% at 50% 0%);
+        -webkit-shape-margin: 2em;
+        shape-margin: 2em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contactus ul.wrapper {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .contactus ul.wrapper li {
+        display: flex;
+        list-style: none;
+        flex-direction: row;
+        text-align: left;
+        justify-content: center;
+    }
+}
