@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  phoneNumber = '+977-9851063719';
+  email = 'himalayanvisiontreks@gmail.com';
+
   constructor() { }
 
   ngOnInit() {

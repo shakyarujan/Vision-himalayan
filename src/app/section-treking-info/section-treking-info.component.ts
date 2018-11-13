@@ -7,6 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SectionTrekingInfoComponent implements OnInit {
 
+  field1 = 'Trekking';
+  fieldDetail1 = 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.';
+  field2 = 'Expedition';
+  fieldDetail2 = 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.';
+  field3 = 'Adventure';
+  fieldDetail3 = 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.';
+  field4 = 'Tours';
+  fieldDetail4 = 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.';
+
   constructor() { }
 
   ngOnInit() {
