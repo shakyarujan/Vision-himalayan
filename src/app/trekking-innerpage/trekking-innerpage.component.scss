@@ -48,6 +48,14 @@
     transition: all 0.4s ease;
 }
 
+.item-detail-text p {
+    display: -webkit-box;
+    font-size: 16px;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .trekking-item .description {
     padding: 30px 20px 20px;
 }
