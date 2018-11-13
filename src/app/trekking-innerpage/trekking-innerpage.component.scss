@@ -1,0 +1,66 @@
+.inner-trekking .navbar {
+    background-color: rgba(0, 0, 0, 0.71) !important;
+}
+
+.trekking-item {
+    display: flex;
+    flex-direction: column;
+    margin: 15px auto;
+    box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+    background: #dee2e6;
+    line-height: 1.4;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 0;
+    flex: 0 0 30%;
+    max-width: 30%;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    // padding: 15px !important;
+    transition: all 0.4s ease;
+}
+
+.trekking-item:hover {
+    transform: scale(1.1);
+}
+
+.trekking-item .img {
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto 30px;
+    height: 220px;
+    // border-top-left-radius: 10px;
+    // border-top-right-radius: 10px
+}
+
+.trekking-item:hover div>img {
+    transform: scale(1.1);
+}
+
+.trekking-item .img img {
+    position: relative;
+    height: 100%;
+    transition: all 0.4s ease;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+}
+
+.trekking-item .description {
+    padding: 30px 20px 20px;
+}
+
+.trekking-item .cta-btn {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+}
+
+.item-detail .pricing :first-child {
+    font-weight: 700;
+}
+
+.item-detail .pricing span:last-child {
+    font-weight: 500;
+    float: right;
+}
