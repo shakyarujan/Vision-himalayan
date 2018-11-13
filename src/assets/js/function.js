@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
-    $(function() {
-        $('.navbar-nav a[routerlink^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
-    });
+    // $(function() {
+    //     $('.navbar-nav a[routerlink^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+    // });
 
 
     /*animation on windows load*/

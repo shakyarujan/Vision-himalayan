@@ -13,11 +13,11 @@ import { CustomerReviewComponent } from './customer-review/customer-review.compo
 import { ContactusComponent } from './contactus/contactus.component';
 import { FooterBgComponent } from './footer-bg/footer-bg.component';
 import { IndexComponent } from './index/index.component';
-import { WhatWeDoComponent } from './what-we-do/what-we-do.component';
-import { WhatWeDoSectionComponent } from './what-we-do-section/what-we-do-section.component';
 import { TrekkingComponent } from './trekking/trekking.component';
-import { TrekkingSectionComponent } from './trekking-section/trekking-section.component';
 import { TrekkingInnerpageComponent } from './trekking-innerpage/trekking-innerpage.component';
+import { ExeditionComponent } from './exedition/exedition.component';
+import { ExpeditionInnerpageComponent } from './expedition-innerpage/expedition-innerpage.component';
+import { ContactusFooterComponent } from './contactus-footer/contactus-footer.component';
 
 @NgModule({
   declarations: [
@@ -32,11 +32,11 @@ import { TrekkingInnerpageComponent } from './trekking-innerpage/trekking-innerp
     ContactusComponent,
     FooterBgComponent,
     IndexComponent,
-    WhatWeDoComponent,
-    WhatWeDoSectionComponent,
     TrekkingComponent,
-    TrekkingSectionComponent,
-    TrekkingInnerpageComponent
+    TrekkingInnerpageComponent,
+    ExeditionComponent,
+    ExpeditionInnerpageComponent,
+    ContactusFooterComponent,
   ],
   imports: [
     BrowserModule,
