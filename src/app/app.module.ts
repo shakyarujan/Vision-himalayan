@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { routes } from './app.routing';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
@@ -11,6 +12,7 @@ import { LangtangTrekkingComponent } from './langtang-trekking/langtang-trekking
 import { CustomerReviewComponent } from './customer-review/customer-review.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { FooterBgComponent } from './footer-bg/footer-bg.component';
+import { IndexComponent } from './index/index.component';
 
 @NgModule({
   declarations: [
@@ -23,10 +25,12 @@ import { FooterBgComponent } from './footer-bg/footer-bg.component';
     LangtangTrekkingComponent,
     CustomerReviewComponent,
     ContactusComponent,
-    FooterBgComponent
+    FooterBgComponent,
+    IndexComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    routes
   ],
   providers: [],
   bootstrap: [AppComponent]
