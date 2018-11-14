@@ -18,6 +18,8 @@ import { TrekkingInnerpageComponent } from './trekking-innerpage/trekking-innerp
 import { ExeditionComponent } from './exedition/exedition.component';
 import { ExpeditionInnerpageComponent } from './expedition-innerpage/expedition-innerpage.component';
 import { ContactusFooterComponent } from './contactus-footer/contactus-footer.component';
+import { PackageDetailComponent } from './package-detail/package-detail.component';
+import { PackageDetailInnerpageComponent } from './package-detail-innerpage/package-detail-innerpage.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { ContactusFooterComponent } from './contactus-footer/contactus-footer.co
     ExeditionComponent,
     ExpeditionInnerpageComponent,
     ContactusFooterComponent,
+    PackageDetailComponent,
+    PackageDetailInnerpageComponent,
   ],
   imports: [
     BrowserModule,

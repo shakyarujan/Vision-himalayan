@@ -14,6 +14,13 @@ body {
     position: relative;
 }
 
+.floating-btn.cta-btn {
+    position: relative;
+    margin-top: -46px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 /* for navbar-bg */
 
@@ -40,6 +47,25 @@ h3.intro-heading {
     font-weight: 700;
 }
 
+
+/* expedition and trekking page */
+
+.trekking-wrapper h3.intro-heading,
+.expedition-wrapper h3.intro-heading {
+    font-size: 62px;
+    font-weight: 900;
+}
+
+@media (max-width: 768px) {
+    .trekking-wrapper h3.intro-heading,
+    .expedition-wrapper h3.intro-heading {
+        font-size: 42px;
+    }
+}
+
+
+/* expedition and trekking page closed*/
+
 .btn-xl {
     font-size: 15px;
     padding: 15px 40px;
@@ -54,14 +80,11 @@ h3.intro-heading {
 
 .mbr-black {
     color: #000;
-}
-
-a.mbr-black {
     transition: all 0.2s ease-in-out;
     transform-origin: center;
 }
 
-a.mbr-black:hover {
+.mbr-black:hover {
     color: #fff;
     transform: scale(1.1);
 }
