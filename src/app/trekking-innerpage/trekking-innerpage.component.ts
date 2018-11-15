@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../service/app.service';
 
 @Component({
   selector: 'app-trekking-innerpage',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrekkingInnerpageComponent implements OnInit {
 
-  constructor() { }
+  trekkingData: any = [];
+
+  constructor(private appService: AppService) { }
 
   ngOnInit() {
+    return this.appService.getTripsData().subscribe(res => {
+      this.trekkingData = res;
+    });
   }
-
 }

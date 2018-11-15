@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+
+import { AppService } from './service/app.service';
 
 import { routes } from './app.routing';
 import { AppComponent } from './app.component';
@@ -44,9 +47,10 @@ import { PackageDetailInnerpageComponent } from './package-detail-innerpage/pack
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     routes
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
