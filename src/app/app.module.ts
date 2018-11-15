@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { Daterangepicker } from 'ng2-daterangepicker';
 import { routes } from './app.routing';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -44,7 +45,8 @@ import { PackageDetailInnerpageComponent } from './package-detail-innerpage/pack
   ],
   imports: [
     BrowserModule,
-    routes
+    routes,
+    Daterangepicker
   ],
   providers: [],
   bootstrap: [AppComponent]
