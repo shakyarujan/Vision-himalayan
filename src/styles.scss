@@ -14,14 +14,6 @@ body {
     position: relative;
 }
 
-.floating-btn.cta-btn {
-    position: relative;
-    margin-top: -46px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
 
 /* for navbar-bg */
 
@@ -51,28 +43,105 @@ h3.intro-heading {
 
 /* expedition and trekking page */
 
+.item-detail-text p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    /* autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+}
+
+.trekking-item,
+.expedition-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.item-detail .pricing :first-child {
+    font-weight: 700;
+}
+
+.item-detail .pricing span:last-child {
+    font-weight: 500;
+    float: none;
+}
+
 .trekking-wrapper h3.intro-heading,
 .expedition-wrapper h3.intro-heading {
     font-size: 62px;
     font-weight: 900;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+    .trekking-item,
+    .expedition-item {
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+    .item-detail .pricing span:last-child {
+        float: right;
+    }
     .trekking-wrapper h3.intro-heading,
     .expedition-wrapper h3.intro-heading {
         font-size: 42px;
     }
 }
 
+@media (min-width: 992px) {
+    .trekking-item,
+    .expedition-item {
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+}
+
+@media (max-width: 480px) {
+    .trekking-item,
+    .expedition-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .pricing span {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
 
 /* expedition and trekking page closed*/
+
+.floating-btn.cta-btn {
+    position: relative;
+    margin-top: -46px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.floating-btn-md.cta-btn {
+    position: relative;
+    margin-top: -22px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
 
 .btn-xl {
     font-size: 15px;
     padding: 15px 40px;
     margin: 20px 0;
     box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
-    transition: all 0.4s ease;
+}
+
+.btn-md {
+    font-size: 14px;
+    padding: 10px 20px;
+}
+
+.btn-sm {
+    font-size: 12px;
+    padding: 10px 20px;
 }
 
 .btn-xl:hover {

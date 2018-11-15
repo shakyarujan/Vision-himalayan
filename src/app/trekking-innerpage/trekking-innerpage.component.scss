@@ -18,8 +18,6 @@
     border-radius: 10px;
     overflow: hidden;
     z-index: 0;
-    flex: 0 0 30%;
-    max-width: 30%;
     -webkit-transform-origin: center;
     transform-origin: center;
     // padding: 15px !important;
@@ -70,18 +68,3 @@
 //     left: 50%;
 //     transform: translate(-50%, -45%);
 // }
-.item-detail .pricing :first-child {
-    font-weight: 700;
-}
-
-.item-detail .pricing span:last-child {
-    font-weight: 500;
-    float: right;
-}
-
-@media (max-width: 768px) {
-    .inner-trekking .row .trekking-item {
-        max-width: 100%;
-        flex: 0 0 100%;
-    }
-}
