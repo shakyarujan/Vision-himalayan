@@ -13,8 +13,9 @@ export class TrekkingInnerpageComponent implements OnInit {
   constructor(private appService: AppService) { }
 
   ngOnInit() {
-    return this.appService.getTripsData().subscribe(res => {
+    return this.appService.getInboundData().subscribe(res => {
       this.trekkingData = res;
     });
   }
+
 }

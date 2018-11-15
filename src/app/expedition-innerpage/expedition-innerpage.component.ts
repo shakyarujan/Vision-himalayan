@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../service/app.service';
 
 @Component({
   selector: 'app-expedition-innerpage',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExpeditionInnerpageComponent implements OnInit {
 
-  constructor() { }
+  expeditionData: any = [];
+
+  constructor(private appService: AppService) { }
 
   ngOnInit() {
+    return this.appService.getOutboundData().subscribe(res => {
+      this.expeditionData = res;
+    });
   }
 
 }

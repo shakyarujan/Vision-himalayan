@@ -20,5 +20,13 @@ export class AppService {
   getItineraryData(trip_id) {
     return this.http.get(`${this.uri}/trip/itinerary/${trip_id}`);
   }
+
+  getInboundData() {
+    return this.http.get(`${this.uri}/trip/inbound/all`);
+  }
+
+  getOutboundData() {
+    return this.http.get(`${this.uri}/trip/outbound/all`);
+  }
 }
 
