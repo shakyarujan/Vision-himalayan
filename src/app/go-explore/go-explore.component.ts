@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
 })
 export class GoExploreComponent implements OnInit {
 
-  trips: any = {};
+  trips: any = [];
 
   constructor(private appService: AppService, private router: Router) { }
 

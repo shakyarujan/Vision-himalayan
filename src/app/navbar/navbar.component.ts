@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+import { AppService } from '../service/app.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,12 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  phoneNumber = '+977-9851063719';
-  email = 'himalayanvisiontreks@gmail.com';
+  info: any = [];
 
-  constructor() { }
+  constructor(private http: HttpClient, private appService: AppService) { }
 
   ngOnInit() {
+    this.getSiteInfo();
+  }
+
+  getSiteInfo() {
+    return this.appService.getSiteInfo().subscribe(res => {
+      this.info = res;
+    });
   }
 
 }

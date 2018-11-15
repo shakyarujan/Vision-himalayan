@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class AppService {
 
   uri = ('https://api-sh.paisamanager.com');
+
   constructor(private http: HttpClient ) { }
 
   getTripsData() {
@@ -27,6 +28,10 @@ export class AppService {
 
   getOutboundData() {
     return this.http.get(`${this.uri}/trip/outbound/all`);
+  }
+
+  getSiteInfo() {
+    return this.http.get(`${this.uri}/site/info`);
   }
 }
 
