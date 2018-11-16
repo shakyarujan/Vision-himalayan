@@ -8,13 +8,26 @@ import { Router, ActivatedRoute } from '@angular/router';
   templateUrl: './package-detail-innerpage.component.html',
   styleUrls: ['./package-detail-innerpage.component.scss']
 })
+
 export class PackageDetailInnerpageComponent implements OnInit {
 
   id: String;
   tripsData: any = [];
   itineraryData: any = [];
 
-  constructor(private appService: AppService, private router: Router, private route: ActivatedRoute) { }
+  // createForm: FormGroup;
+
+  constructor(private appService: AppService, private router: Router, private route: ActivatedRoute) {
+    // this.createForm = this.fb.group({
+    //   user_id: '',
+    //   date: '',
+    //   adult: '',
+    //   children: '',
+    //   fullname: '',
+    //   email: '',
+    //   mobile: ''
+    // });
+  }
 
   ngOnInit() {
     this.tripDetail();
@@ -40,5 +53,10 @@ export class PackageDetailInnerpageComponent implements OnInit {
     });
   }
 
+  // addBooking(user_id, date, adult, children, fullname, email, mobile) {
+  //   this.appService.addBooking(user_id, date, adult, children, fullname, email, mobile).subscribe(() => {
+  //     this.router.navigate([`/package-detail/${user_id}`]);
+  //   });
+  // }
 
 }

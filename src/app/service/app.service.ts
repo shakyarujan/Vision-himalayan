@@ -33,5 +33,20 @@ export class AppService {
   getSiteInfo() {
     return this.http.get(`${this.uri}/site/info`);
   }
+
+  addBooking(user_id, date, adult, children, fullname, email, mobile){
+    const book = {
+      user_id: user_id,
+      date: date,
+      adult: adult,
+      children: children,
+      fullname: fullname,
+      email: email,
+      mobile: mobile
+    };
+
+    return this.http.post(`${this.uri}/`, book);
+  }
+
 }
 
