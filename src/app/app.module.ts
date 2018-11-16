@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+
+import { AppService } from './service/app.service';
 
 import { Daterangepicker } from 'ng2-daterangepicker';
 import { routes } from './app.routing';
@@ -45,10 +48,11 @@ import { PackageDetailInnerpageComponent } from './package-detail-innerpage/pack
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     routes,
     Daterangepicker
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

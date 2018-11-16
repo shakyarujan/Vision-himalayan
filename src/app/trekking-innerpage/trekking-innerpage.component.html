@@ -14,157 +14,26 @@
                     </div>
                 </div>
                 <div class="row item-container mt-5">
-                    <div class="trekking-item col-sm col-md-4 col-lg-4 no-padding">
+                    <div class="trekking-item col-sm col-md-4 col-lg-4 no-padding" *ngFor="let trekkingData of trekkingData">
                         <div class="img xs-no-padding">
-                            <img src="../../assets/img/maldives.png" alt="image">
+                            <img src="{{ trekkingData.cover_photo }}" alt="image">
                         </div>
-                        <div class="floating-btn-md cta-btn md-pr-30 xs-no-padding">
-                            <a class="btn bg-primarycolor mbr-black btn-md text-uppercase" href="#"> 
+                        <div class="floating-btn cta-btn md-pr-30 xs-no-padding">
+                            <a class="btn bg-primarycolor mbr-black btn-xl text-uppercase" [routerLink]="['/package-detail' , trekkingData.trip_id]" routerLinkActive="router-link-active">
                                 View Detail
                             </a>
                         </div>
                         <div class="description">
                             <div class="title-wrapper mb-3">
-                                <h3 class="block-title">Chilli</h3>
+                                <h3 class="block-title">{{ trekkingData.name }}</h3>
                             </div>
                             <div class="item-detail">
                                 <div class="pricing mb-3">
-                                    <span>Rs.89,000/-</span>
-                                    <span>5 Days 6 Nights</span>
+                                    <span>Rs. {{ trekkingData.price }} -</span>
+                                    <span>{{ trekkingData.duration}}</span>
                                 </div>
                                 <div class="item-detail-text">
-                                    <p>
-                                        Egestas dignissim a enim lorem a mus egestas risus porta? Sed. Scelerisque, in nec velit augue aenean a, vut velit nec!
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="trekking-item col-sm col-md-4 col-lg-4 no-padding">
-                        <div class="img xs-no-padding">
-                            <img src="../../assets/img/maldives-2.png" alt="image">
-                        </div>
-                        <div class="floating-btn-md cta-btn md-pr-30 xs-no-padding">
-                            <a class="btn bg-primarycolor mbr-black btn-md text-uppercase" href="#"> 
-                                View Detail
-                            </a>
-                        </div>
-                        <div class="description">
-                            <div class="title-wrapper mb-3">
-                                <h3 class="block-title">Ireland</h3>
-                            </div>
-                            <div class="item-detail">
-                                <div class="pricing mb-3">
-                                    <span>Rs.99,000/-</span>
-                                    <span>5 Days 6 Nights</span>
-                                </div>
-                                <div class="item-detail-text">
-                                    <p>
-                                        Egestas dignissim a enim lorem a mus egestas risus porta? Sed. Scelerisque, in nec velit augue aenean a, vut velit nec!
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="trekking-item col-sm col-md-4 col-lg-4 no-padding">
-                        <div class="img xs-no-padding">
-                            <img src="../../assets/img/maldives-3.png" alt="image">
-                        </div>
-                        <div class="floating-btn-md cta-btn md-pr-30 xs-no-padding">
-                            <a class="btn bg-primarycolor mbr-black btn-md text-uppercase" href="#"> 
-                                View Detail
-                            </a>
-                        </div>
-                        <div class="description">
-                            <div class="title-wrapper mb-3">
-                                <h3 class="block-title">Maldives</h3>
-                            </div>
-                            <div class="item-detail">
-                                <div class="pricing mb-3">
-                                    <span>Rs.89,000/-</span>
-                                    <span>5 Days 6 Nights</span>
-                                </div>
-                                <div class="item-detail-text">
-                                    <p>
-                                        Egestas dignissim a enim lorem a mus egestas risus porta? Sed. Scelerisque, in nec velit augue aenean a, vut velit nec!
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="trekking-item col-sm col-md-4 col-lg-4 no-padding">
-                        <div class="img xs-no-padding">
-                            <img src="../../assets/img/maldives-2.png" alt="image">
-                        </div>
-                        <div class="floating-btn-md cta-btn md-pr-30 xs-no-padding">
-                            <a class="btn bg-primarycolor mbr-black btn-md text-uppercase" href="#"> 
-                                    View Detail
-                                </a>
-                        </div>
-                        <div class="description">
-                            <div class="title-wrapper mb-3">
-                                <h3 class="block-title">Ireland</h3>
-                            </div>
-                            <div class="item-detail">
-                                <div class="pricing mb-3">
-                                    <span>Rs.99,000/-</span>
-                                    <span>5 Days 6 Nights</span>
-                                </div>
-                                <div class="item-detail-text">
-                                    <p>
-                                        Egestas dignissim a enim lorem a mus egestas risus porta? Sed. Scelerisque, in nec velit augue aenean a, vut velit nec!
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="trekking-item col-sm col-md-4 col-lg-4 no-padding">
-                        <div class="img xs-no-padding">
-                            <img src="../../assets/img/maldives-3.png" alt="image">
-                        </div>
-                        <div class="floating-btn-md cta-btn md-pr-30 xs-no-padding">
-                            <a class="btn bg-primarycolor mbr-black btn-md text-uppercase" href="#"> 
-                                    View Detail
-                                </a>
-                        </div>
-                        <div class="description">
-                            <div class="title-wrapper mb-3">
-                                <h3 class="block-title">Maldives</h3>
-                            </div>
-                            <div class="item-detail">
-                                <div class="pricing mb-3">
-                                    <span>Rs.89,000/-</span>
-                                    <span>5 Days 6 Nights</span>
-                                </div>
-                                <div class="item-detail-text">
-                                    <p>
-                                        Egestas dignissim a enim lorem a mus egestas risus porta? Sed. Scelerisque, in nec velit augue aenean a, vut velit nec!
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="trekking-item col-sm col-md-4 col-lg-4 no-padding">
-                        <div class="img xs-no-padding">
-                            <img src="../../assets/img/maldives.png" alt="image">
-                        </div>
-                        <div class="floating-btn-md cta-btn md-pr-30 xs-no-padding">
-                            <a class="btn bg-primarycolor mbr-black btn-md text-uppercase" href="#"> 
-                                View Detail
-                            </a>
-                        </div>
-                        <div class="description">
-                            <div class="title-wrapper mb-3">
-                                <h3 class="block-title">Chilli</h3>
-                            </div>
-                            <div class="item-detail">
-                                <div class="pricing mb-3">
-                                    <span>Rs.89,000/-</span>
-                                    <span>5 Days 6 Nights</span>
-                                </div>
-                                <div class="item-detail-text">
-                                    <p>
-                                        Egestas dignissim a enim lorem a mus egestas risus porta? Sed. Scelerisque, in nec velit augue aenean a, vut velit nec!
+                                    <p [innerHTML]=" trekkingData.overview ">
                                     </p>
                                 </div>
                             </div>

@@ -10,78 +10,27 @@
         <div class="container">
             <div class="inner-wrapper">
                 <div class="row">
-                    <div class="col-md-8 col-lg-9">
+                    <div class="col-md-9" *ngFor="let trip of tripsData">
                         <div class="main-title mb-3">
-                            <h2 class="intro-heading">Amazing Chilli</h2>
+                            <h3 class="intro-heading">{{ trip.name }}</h3>
                         </div>
                         <div class="img">
-                            <img src="../../assets/img/amazing-chill.png" alt="image">
+                            <img src="{{ trip.cover_photo }}" alt="image">
                         </div>
                         <div class="content-wrapper">
                             <div class="overview">
                                 <h3 class="title">Overview</h3>
                                 <div class="overview-detail">
-                                    <p>
-                                        Egestas dignissim a enim lorem a mus egestas risus porta? Sed. Scelerisque, in nec velit augue aenean a, vut velit nec! Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
-                                        making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through
-                                        the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,
-                                        written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. The standard
-                                        chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied
-                                        by English versions from the 1914 translation by H. Rackham.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000
-                                        years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the
-                                        word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
-                                        This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. ege in Virginia, looked
-                                        up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections
-                                        1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first
-                                        line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                                    <p [innerHTML]= "trip.overview">
                                     </p>
                                 </div>
                             </div>
                             <div class="itinerary">
                                 <h3 class="title">Detailed Day Wise Itinerary</h3>
-                                <div class="itinerary-item">
-                                    <h6>Day 1
-                                        <span> Bali Arrival – Sunset Dinner Cruise (D)</span>
-                                    </h6>
-                                    <p>Upon arrival at International Airport of Bali, meet & greet then directly transferred to your chosen hotel for check in. In the afternoon you will be picked up at Hotel lobby to Join Sunset Dinner Cruise. There’s no
-                                        better way to spend a balmy tropical evening than on Evening Dinner Cruise in the SEA SAFARI CRUISE. As the sun goes down we set off on a relaxing cruise around the harbour. Be entertained by our live musical entertainers
-                                        at the bridge deck, savour a delicious international buffet dinner, then dance the night away at our disco or enjoy our live cabaret show. Return to hotel.
-                                    </p>
-                                </div>
-                                <div class="itinerary-item">
-                                    <h6>Day 2
-                                        <span> FULL DAY DENPASAR CITY TOUR – UBUD (B)</span>
-                                    </h6>
-                                    <p>Breakfast at hotel. This tour visits the BALI MUSEUM with its grand architecture housing artifacts from antiquity. Continue Photo stop in BAJRA SANDI Monument Renon. Next visit BATUBULAN stone figures on the roadside
-                                        mark the village as the center of stone carving. Divinities and demons are carved from sandstone, limestone or volcanic stone to be used in houses and temples, or to be placed before entrances and road intersections.
-                                        Continue to CELUK, famous for it is silver and gold smith also the place where you may see traditional Balinese house compound, next proceed to MAS: the home of Bali’s talented woodcarver and well known for special
-                                        quality woodcarving and others handicraft, then UBUD: worldwide known as Bali’s heart of art & craft especially painting. Last stop is UBUD MARKET. Back to hotel.
-                                    </p>
-                                </div>
-                                <div class="itinerary-item">
-                                    <h6>Day 3
-                                        <span> FULL DAY  BEDUGUL - TANAH LOT TOUR (B)</span>
-                                    </h6>
-                                    <p>Breakfast at hotel. The tour will visit TAMAN AYUN Royal Family Temple in Mengwi, then drive up to BEDUGUL-an attractive mountain resort located about 1100 meters above sea level. There lies tropical market and an ancient
-                                        Lake Beratan with its magnificent “floating” Ulun Danu Temple dedicated to the goddess of the water dwelling in this area. After lunch drive down to TANAH LOT-a spectacular temple built in the 17th century, on top
-                                        of rock about 200 meters offshore. The whole compound will turn into a wonderful silhouette as the sunset right behind the temple, one of the most photographed temples on the island - for good reason.  Back to hotel
-                                        for accommodation.
-                                    </p>
-                                </div>
-                                <div class="itinerary-item">
-                                    <h6>Day 4
-                                        <span> FREE PROGRAM (B)</span>
-                                    </h6>
-                                    <p>Breakfast serve at hotel. Free program at your own leisure
-                                    </p>
-                                </div>
-                                <div class="itinerary-item">
-                                    <h6>Day 5
-                                        <span> BALI - DEPARTURE (B)</span>
-                                    </h6>
-                                    <p>Breakfast at hotel, then transfer to the airport for your onward flight.
-                                    </p>
-                                </div>
+                                <div class="itinerary-item" *ngFor="let itinerary of itineraryData">
+                                    <h4>{{ itinerary.day }}</h4>
+                                    <p [innerHTML]="itinerary.description"></p>
+                                  </div>
                             </div>
                             <div class="offer-includes">
                                 <h3 class="title">Offer Includes</h3>
@@ -103,31 +52,31 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-lg-3">
+                    <div class="col-md-3" *ngFor="let trip of tripsData">
                         <div class="pricing-detail">
                             <h3>
                                 <span class="starting-price">Starting Price from</span>
-                                <span class="cost">NPR 89,000/-</span>
-                                <span class="duration">5 Days/4 Nights</span>
-                                <span class="destination">Kathmandu-Chill</span>
+                                <span class="cost">- {{ trip.price}}</span>
+                                <span class="duration">{{ trip.duration}}</span>
+                                <span class="destination">{{ trip.name }}</span>
                             </h3>
                         </div>
                         <div class="tour-brief">
                             <ul>
                                 <li>
-                                    <span>Highest Altitude</span> N/A
+                                    <span>Highest Altitude</span> {{ trip.altitude }}
                                 </li>
                                 <li>
-                                    <span>Trip Grade</span> 4.5
+                                    <span>Trip Grade</span> {{ trip.rating }}
                                 </li>
                                 <li>
-                                    <span>Trip Difficulty</span> Easy
+                                    <span>Trip Difficulty</span> {{ trip.difficulty}}
                                 </li>
                                 <li>
-                                    <span>Trip Season</span> Summer/Spring
+                                    <span>Trip Season</span> {{ trip.season }}
                                 </li>
                                 <li>
-                                    <span>Activities</span> Tours
+                                    <span>Activities</span> {{ trip.keyword }}
                                 </li>
                             </ul>
                         </div>

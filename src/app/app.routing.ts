@@ -12,7 +12,7 @@ export const router: Routes = [
    { path: '', component: IndexComponent },
    { path: 'trekking', component: TrekkingComponent},
    { path: 'expedition', component: ExeditionComponent},
-   { path: 'package-detail', component: PackageDetailComponent}
+   { path: 'package-detail/:id', component: PackageDetailComponent}
 
 ];
 
