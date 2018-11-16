@@ -33,7 +33,7 @@
                                   </div>
                             </div>
                             <div class="offer-includes">
-                                <h3>Offer Includes</h3>
+                                <h3 class="title">Offer Includes</h3>
                                 <ul>
                                     <li>Airfare KTM-BKK-KTM.</li>
                                     <li>Airport Picks Up And Drops.</li>
@@ -44,7 +44,7 @@
                                 </ul>
                             </div>
                             <div class="offer-excludes">
-                                <h3>Offer Excludes</h3>
+                                <h3 class="title">Offer Excludes</h3>
                                 <ul>
                                     <li>Other Beverage Throughout Trip.</li>
                                     <li>Expenses Of Personal Nature ( Tel Calls, Laundry, Porterage & Tips)</li>
@@ -85,24 +85,33 @@
                             <ul>
                                 <li>
                                     <a href="tel:+977-9851063719">
-                                        <i class="fas fa-phone"></i>
-                                        <span class="phone">+977-9851063719</span>
+                                        <span>
+                      <i class="fas fa-phone"></i>
+                    </span> +977-9851063719
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="tel:+977-9851063719">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span class="phone">Hattisar, Kathmandu</span>
+                                    <a>
+                                        <span>
+                      <i class="fas fa-map-marker-alt"></i>
+                    </span> Hattisar, Kathmandu
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="mailto:himalayanvisiontreks@gmail.com">
-                                        <i class="fas fa-envelope"></i>
-                                        <span class="mail">booking@smartholidaysnp.com</span>
+                                    <a href="mailto:booking@smartholidaysnp.com">
+                                        <span>
+                      <i class="fas fa-envelope"></i>
+                    </span> booking@smartholidaysnp.com
                                     </a>
                                 </li>
                             </ul>
-                            <a class="btn bg-primarycolor mbr-black btn-xl text-uppercase" href="#">Book Now</a>
+                            <!-- <a class="btn bg-primarycolor mbr-black btn-md text-uppercase" href="#">Book Now</a> -->
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn bg-primarycolor mbr-black btn-md text-uppercase" data-toggle="modal" data-target="#exampleModalLong">
+                                Book Now
+                            </button>
+
                         </div>
                         <div class="enquiry">
                             <h4>Enquiry</h4>
@@ -118,7 +127,7 @@
                                         <input class="form-control custom-field" id="contact" placeholder="Contact No." type="number">
                                     </div>
                                     <div class="form-group">
-                                        <input class="btn bg-primarycolor mbr-black btn-xl text-uppercase" type="submit" value="Submit Now">
+                                        <input class="btn bg-primarycolor mbr-black btn-md text-uppercase" type="submit" value="Submit Now">
                                     </div>
                                 </form>
                             </div>
@@ -153,13 +162,18 @@
                                         <div class="img-wrapper">
                                             <img src="../../assets/img/maldives.png" alt="image">
                                         </div>
+                                        <div class="floating-btn cta-btn md-pr-30 xs-no-padding">
+                                            <a class="btn bg-primarycolor mbr-black btn-sm text-uppercase" href="#"> 
+                                                View Detail 
+                                            </a>
+                                        </div>
                                         <div class="description">
-                                            <div class="title-wrapper">
-                                                <h3 class="block-title"></h3>
+                                            <div class="title-wrapper mb-3">
+                                                <h3 class="block-title">Maldives</h3>
                                             </div>
                                             <div class="item-detail">
-                                                <div class="pricing">
-                                                    <span>Rs.89,000/-</span>
+                                                <div class="pricing mb-3">
+                                                    <span>Rs.99,000/-</span>
                                                     <span>5 Days 6 Nights</span>
                                                 </div>
                                                 <div class="item-detail-text">
@@ -175,34 +189,18 @@
                                         <div class="img-wrapper">
                                             <img src="../../assets/img/maldives-2.png" alt="image">
                                         </div>
-                                        <div class="description">
-                                            <div class="title-wrapper">
-                                                <h3 class="block-title"></h3>
-                                            </div>
-                                            <div class="item-detail">
-                                                <div class="pricing">
-                                                    <span>Rs.89,000/-</span>
-                                                    <span>5 Days 6 Nights</span>
-                                                </div>
-                                                <div class="item-detail-text">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque, quidem incidunt modi delectus, consectetur inventore omnis nihil maiores harum!
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="destination-item">
-                                    <div class="destination-wrapper">
-                                        <div class="img-wrapper">
-                                            <img src="../../assets/img/maldives-3.png" alt="image">
+                                        <div class="floating-btn cta-btn md-pr-30 xs-no-padding">
+                                            <a class="btn bg-primarycolor mbr-black btn-sm text-uppercase" href="#"> 
+                                                View Detail 
+                                            </a>
                                         </div>
                                         <div class="description">
-                                            <div class="title-wrapper">
-                                                <h3 class="block-title"></h3>
+                                            <div class="title-wrapper mb-3">
+                                                <h3 class="block-title">Chilli</h3>
                                             </div>
+
                                             <div class="item-detail">
-                                                <div class="pricing">
+                                                <div class="pricing mb-3">
                                                     <span>Rs.89,000/-</span>
                                                     <span>5 Days 6 Nights</span>
                                                 </div>
@@ -216,6 +214,84 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="booking-form">
+        <div class="container">
+            <!-- Modal -->
+            <div class="modal fade bd-example-modal-lg" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title col-12" id="exampleModalLongTitle">Amazing Chilli</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="ng-pristine ng-invalid ng-touched">
+                                <div class="trip-wrapper">
+                                    <div class="form-group">
+                                        <label for="expiry-date" class="travel-date">Travel Date (From - To)*</label>
+                                        <div class="from-group col-md-6">
+                                            <input class="form-control" type="text" name="daterangeInput" daterangepicker [options]="options" (selected)="selectedDate($event)" (cancelDaterangepicker)="calendarCanceled($event)" (applyDaterangepicker)="calendarApplied($event)" />
+                                            <span id="startdateError"></span>
+                                            <span id="enddateError"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <h3 class="sub-title">Number of Travelers</h3>
+                                        <div class="form-group row traveler-no">
+                                            <div class="col-md-6 form-group">
+                                                <label for="adults">Adults*</label>
+                                                <input class="form-control ng-pristine ng-invalid ng-touched" formcontrolname="adults" id="adults" name="adults" placeholder="No. of adults..." type="number">
+                                            </div>
+                                            <div class="col-md-6 form-group">
+                                                <label for="childrens">Childrens*</label>
+                                                <input class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="childrens" id="childrens" name="childrens" placeholder="No. of childrens..." type="number">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <h3 class="sub-title">Trip Leader Detail</h3>
+                                        <div class="form-group trip-detail">
+                                            <div class="col-md-6 form-group">
+                                                <label for="contactName">Full Name*</label>
+                                                <input class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="contactName" id="contactName" name="contactName" placeholder="Enter Full Name..." type="text">
+                                            </div>
+                                            <div class="col-md-6 form-group">
+                                                <label for="email">Contact Email*</label>
+                                                <input class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="contactEmail" id="contactEmail" name="contactEmail" placeholder="Enter Contact Email..." required="" type="email">
+                                                <span class="error" id="emailValidate"></span>
+                                            </div>
+                                            <div class="col-md-6 form-group">
+                                                <label for="contactNumber">Mobile Number*</label>
+                                                <input class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="contactNumber" id="contactNumber" name="contactNumber" placeholder="Enter Mobile Number..." type="number">
+                                            </div>
+                                            <div class="col-md-6 form-group">
+                                                <span class="error" id="mobileNumberLength"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-check book">
+                                        <label>
+                                            <input id="termsCheck" name="termsCheck" required="" type="checkbox"> I agree to the 
+                                            <a routerlink="/terms" target="_blank" href="#/terms">Terms and Conditions</a> and 
+                                            <a target="_blank">Privacy Policy</a>
+                                        </label>
+                                    </div>
+                                    <input class="btn bg-primarycolor mbr-black btn-md text-uppercase" id="confirmBttn" type="submit" value="BOOK" disabled>
+                                    <button class="btn btn-md text-uppercase modal-close-btn pull-right" data-dismiss="modal" type="button">Close</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Book</button>
+                        </div> -->
                     </div>
                 </div>
             </div>

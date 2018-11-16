@@ -28,11 +28,13 @@ export class PackageDetailInnerpageComponent implements OnInit {
     //   mobile: ''
     // });
   }
+  public daterange: any = {};
 
   ngOnInit() {
     this.tripDetail();
     this.itineraryDetails();
   }
+
 
   tripDetail() {
     this.route.params.subscribe(params => {
@@ -58,5 +60,25 @@ export class PackageDetailInnerpageComponent implements OnInit {
   //     this.router.navigate([`/package-detail/${user_id}`]);
   //   });
   // }
+
+    selectedDate(value: any) {
+        this.daterange.start = value.start;
+        this.daterange.end = value.end;
+    }
+
+    // expected output is an object containing the event and the picker.
+    // your method can be named whaterver you want.
+    // you can add multiple params to the method and pass them in the template
+    public calendarCanceled(e:any) {
+      console.log(e);
+      // e.event
+      // e.picker
+  }
+
+  public calendarApplied(e:any) {
+      console.log(e);
+      // e.event
+      // e.picker
+  }
 
 }
