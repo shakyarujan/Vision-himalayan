@@ -12,27 +12,27 @@
                 <div class="row">
                     <div class="col-md-9" *ngFor="let trip of tripsData">
                         <div class="main-title mb-3">
-                            <h3 class="intro-heading">{{ trip.name }}</h3>
+                            <h2 class="intro-heading">{{ trip.name }}</h2>
                         </div>
                         <div class="img">
                             <img src="{{ trip.cover_photo }}" alt="image">
                         </div>
                         <div class="content-wrapper">
-                            <div class="overview">
+                            <div class="overview m-b-30">
                                 <h3 class="title">Overview</h3>
                                 <div class="overview-detail">
-                                    <p [innerHTML]= "trip.overview">
+                                    <p [innerHTML]="trip.overview">
                                     </p>
                                 </div>
                             </div>
-                            <div class="itinerary">
+                            <div class="itinerary m-b-30">
                                 <h3 class="title">Detailed Day Wise Itinerary</h3>
                                 <div class="itinerary-item" *ngFor="let itinerary of itineraryData">
                                     <h4>{{ itinerary.day }}</h4>
                                     <p [innerHTML]="itinerary.description"></p>
-                                  </div>
+                                </div>
                             </div>
-                            <div class="offer-includes">
+                            <div class="offer-includes m-b-30">
                                 <h3 class="title">Offer Includes</h3>
                                 <ul>
                                     <li>Airfare KTM-BKK-KTM.</li>
@@ -43,7 +43,7 @@
                                     <li>Transfer Bangkok Airport – Pattaya Hotel – Bangkok Airport</li>
                                 </ul>
                             </div>
-                            <div class="offer-excludes">
+                            <div class="offer-excludes m-b-30">
                                 <h3 class="title">Offer Excludes</h3>
                                 <ul>
                                     <li>Other Beverage Throughout Trip.</li>
@@ -56,7 +56,7 @@
                         <div class="pricing-detail">
                             <h3>
                                 <span class="starting-price">Starting Price from</span>
-                                <span class="cost">- {{ trip.price}}</span>
+                                <span class="cost">NPR {{ trip.price}} /-</span>
                                 <span class="duration">{{ trip.duration}}</span>
                                 <span class="destination">{{ trip.name }}</span>
                             </h3>
@@ -236,7 +236,7 @@
                                 <div class="trip-wrapper">
                                     <div class="form-group">
                                         <label for="expiry-date" class="travel-date">Travel Date (From - To)*</label>
-                                        <div class="from-group col-md-6">
+                                        <div class="from-group">
                                             <input class="form-control" type="text" name="daterangeInput" daterangepicker [options]="options" (selected)="selectedDate($event)" (cancelDaterangepicker)="calendarCanceled($event)" (applyDaterangepicker)="calendarApplied($event)" />
                                             <span id="startdateError"></span>
                                             <span id="enddateError"></span>
@@ -257,7 +257,7 @@
                                     </div>
                                     <div class="form-group">
                                         <h3 class="sub-title">Trip Leader Detail</h3>
-                                        <div class="form-group trip-detail">
+                                        <div class="form-group row trip-detail">
                                             <div class="col-md-6 form-group">
                                                 <label for="contactName">Full Name*</label>
                                                 <input class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="contactName" id="contactName" name="contactName" placeholder="Enter Full Name..." type="text">
