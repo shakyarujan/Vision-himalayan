@@ -286,8 +286,8 @@
                             <form class="ng-pristine ng-invalid ng-touched">
                                 <div class="trip-wrapper">
                                     <div class="form-group">
-                                        <label for="expiry-date">Travel Date (From - To)*</label>
-                                        <div class="from-group">
+                                        <label for="expiry-date" class="travel-date">Travel Date (From - To)*</label>
+                                        <div class="from-group col-md-6">
                                             <input class="form-control" type="text" name="daterangeInput" daterangepicker [options]="options" (selected)="selectedDate($event)" (cancelDaterangepicker)="calendarCanceled($event)" (applyDaterangepicker)="calendarApplied($event)" />
                                             <span id="startdateError"></span>
                                             <span id="enddateError"></span>
@@ -295,12 +295,12 @@
                                     </div>
                                     <div class="form-group">
                                         <h3 class="sub-title">Number of Travelers</h3>
-                                        <div class="form-group row">
-                                            <div class="col-md-6">
+                                        <div class="form-group row traveler-no">
+                                            <div class="col-md-6 form-group">
                                                 <label for="adults">Adults*</label>
                                                 <input class="form-control ng-pristine ng-invalid ng-touched" formcontrolname="adults" id="adults" name="adults" placeholder="No. of adults..." type="number">
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-md-6 form-group">
                                                 <label for="childrens">Childrens*</label>
                                                 <input class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="childrens" id="childrens" name="childrens" placeholder="No. of childrens..." type="number">
                                             </div>
@@ -308,7 +308,7 @@
                                     </div>
                                     <div class="form-group">
                                         <h3 class="sub-title">Trip Leader Detail</h3>
-                                        <div class="form-group">
+                                        <div class="form-group trip-detail">
                                             <div class="col-md-6 form-group">
                                                 <label for="contactName">Full Name*</label>
                                                 <input class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="contactName" id="contactName" name="contactName" placeholder="Enter Full Name..." type="text">

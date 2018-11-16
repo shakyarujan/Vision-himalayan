@@ -256,11 +256,11 @@ h2.intro-heading {
 
 /* booking form popup modal */
 
-button.btn {
+.booking-form button.btn {
     transition: all 0.2s ease-in-out;
 }
 
-button.btn:hover {
+.booking-form button.btn:hover {
     transform: scale(1.1);
 }
 
@@ -277,6 +277,14 @@ button.close {
     margin: 10px;
 }
 
+.modal-header {
+    background: #21b5ff;
+}
+
+.modal-header h5 {
+    font-size: 26px;
+}
+
 .trip-wrapper {
     padding: 20px 30px;
 }
@@ -285,6 +293,10 @@ button.close {
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 700;
+}
+
+label.travel-date {
+    font-size: 18px;
 }
 
 .form-group.row .col-md-6,
@@ -302,7 +314,6 @@ button.close {
 .form-control {
     height: 40px;
     font-size: 14px;
-    width: 90%;
 }
 
 .form-check {
@@ -322,4 +333,19 @@ button.close {
 
 button {
     cursor: pointer;
+}
+
+.traveler-no,
+.trip-detail {
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+}
+
+.traveler-no .form-group,
+.trip-detail .form-group,
+{
+    // flex: 0 0 45%;
+    // max-width: 45%;
+    margin-right: 10px;
 }
