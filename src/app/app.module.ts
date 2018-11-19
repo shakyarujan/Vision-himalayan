@@ -24,6 +24,8 @@ import { ExpeditionInnerpageComponent } from './expedition-innerpage/expedition-
 import { ContactusFooterComponent } from './contactus-footer/contactus-footer.component';
 import { PackageDetailComponent } from './package-detail/package-detail.component';
 import { PackageDetailInnerpageComponent } from './package-detail-innerpage/package-detail-innerpage.component';
+import { AboutComponent } from './about/about.component';
+import { AboutInnerpageComponent } from './about-innerpage/about-innerpage.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { PackageDetailInnerpageComponent } from './package-detail-innerpage/pack
     ContactusFooterComponent,
     PackageDetailComponent,
     PackageDetailInnerpageComponent,
+    AboutComponent,
+    AboutInnerpageComponent,
   ],
   imports: [
     BrowserModule,

@@ -5,7 +5,8 @@
 }
 
 .expedition-wrapper {
-    border-bottom: 2px solid #dee2e6;
+    // border-bottom: 2px solid #dee2e6;
+    background-color: #ebebeb;
 }
 
 .expedition-item {
@@ -13,7 +14,7 @@
     flex-direction: column;
     margin: 25px auto;
     box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
-    background: #dee2e6;
+    background: #fff;
     line-height: 1.4;
     border-radius: 10px;
     overflow: hidden;
@@ -29,12 +30,9 @@
 }
 
 .expedition-item .img {
-    overflow: hidden;
-    // width: 100%;
-    // margin: 0 auto 30px;
-    // height: 220px;
-    // border-top-left-radius: 10px;
-    // border-top-right-radius: 10px;
+    width: 100%;
+    margin: 0 auto;
+    height: 220px;
 }
 
 .expedition-item:hover div>img {
@@ -43,11 +41,8 @@
 
 .expedition-item .img img {
     position: relative;
-    height: auto;
+    height: 100%;
     width: 100%;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    transition: all 0.4s ease;
 }
 
 .expedition-item .description {
