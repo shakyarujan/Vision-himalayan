@@ -4,7 +4,6 @@ import {  FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { DaterangepickerConfig } from 'ng2-daterangepicker';
 
-
 @Component({
   selector: 'app-package-detail-innerpage',
   templateUrl: './package-detail-innerpage.component.html',
@@ -21,7 +20,7 @@ export class PackageDetailInnerpageComponent implements OnInit {
 
   // createForm: FormGroup;
 
-  constructor(private appService: AppService, private router: Router, private route: ActivatedRoute, private daterangepickerOptions: DaterangepickerConfig) {
+  constructor(private appService: AppService, private router: Router, private route: ActivatedRoute, private daterangepickerOptions: DaterangepickerConfig ) {
     // this.createForm = this.fb.group({
     //   user_id: '',
     //   date: '',
@@ -31,6 +30,8 @@ export class PackageDetailInnerpageComponent implements OnInit {
     //   contactEmail: ['', Validators.required, Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')],
     //   contactNumber: ['', Validators.required, Validators.pattern("[0-9]{0-10}")]
     // });
+
+
 
     this.daterangepickerOptions.settings = {
       locale: { format: 'YYYY-MM-DD' },

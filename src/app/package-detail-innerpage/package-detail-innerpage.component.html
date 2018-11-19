@@ -222,8 +222,8 @@
     <section class="booking-form">
         <div class="container">
             <!-- Modal -->
-            <div class="modal fade bd-example-modal-lg" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog modal-lg" role="document" *ngFor="let trip of tripsData">
+            <div class="modal fade bd-example-modal-lg" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true"  *ngFor="let trip of tripsData" >
+                <div class="modal-dialog modal-dialog modal-lg" role="document" >
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title col-12" id="exampleModalLongTitle">{{ trip.name }}</h5>
@@ -298,3 +298,4 @@
         </div>
     </section>
 </section>
+
