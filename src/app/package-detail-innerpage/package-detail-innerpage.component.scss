@@ -166,7 +166,7 @@
 }
 
 .booking-form button.btn:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .booking-form .modal-header h5 {
@@ -253,4 +253,22 @@ button {
     flex: 0 0 48%;
     max-width: 48%;
     margin-right: 10px;
+}
+
+.trip-wrapper .travel-date {
+    margin-bottom: 2em;
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .traveler-no .form-group,
+    .trip-detail .form-group,
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-right: 0;
+    }
+    .trip-wrapper .travel-date {
+        margin-right: 0;
+    }
 }

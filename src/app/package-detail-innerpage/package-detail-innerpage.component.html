@@ -236,7 +236,7 @@
                                 <div class="trip-wrapper">
                                     <div class="form-group">
                                         <label for="expiry-date" class="travel-date">Travel Date (From - To)*</label>
-                                        <div class="from-group">
+                                        <div class="form-group travel-date">
                                             <input class="form-control" type="text" name="daterangeInput" daterangepicker [options]="options" (selected)="selectedDate($event)" (cancelDaterangepicker)="calendarCanceled($event)" (applyDaterangepicker)="calendarApplied($event)" />
                                             <span id="startdateError"></span>
                                             <span id="enddateError"></span>
@@ -283,8 +283,8 @@
                                             <a target="_blank">Privacy Policy</a>
                                         </label>
                                     </div>
-                                    <input class="btn bg-primarycolor mbr-black btn-md text-uppercase" id="confirmBttn" type="submit" value="BOOK" disabled>
-                                    <button class="btn btn-md text-uppercase modal-close-btn pull-right" data-dismiss="modal" type="button">Close</button>
+                                    <input class="btn bg-primarycolor mbr-black btn-sm text-uppercase" id="confirmBttn" type="submit" value="Book" disabled>
+                                    <button class="btn btn-sm text-uppercase modal-close-btn pull-right" data-dismiss="modal" type="button">Close</button>
                                 </div>
                             </form>
                         </div>
