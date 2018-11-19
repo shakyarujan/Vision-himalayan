@@ -18,11 +18,10 @@
             <div class="row wrapper m-b-30">
 
                 <div class="gallery-item col-sm-12 col-md-4 col-lg-4" *ngFor="let image of images">
-                    <a href="#">
-                        <img src="{{ image.cover_photo }}" class="img-responsive" (click)="tripId(image.trip_id)" >
-                        <img src="../../assets/img/everest.png" class="img-responsive">
+                    <a href="#" [routerLink]="['/package-detail' , image.trip_id]" routerLinkActive="router-link-active" >
+                        <img src="{{ image.cover_photo }}" class="img-responsive">
                         <div class="figcaption">
-                            <h4 class="title">Package Title</h4>
+                            <h4 class="title">{{ image.name }}</h4>
                         </div>
                     </a>
                 </div>

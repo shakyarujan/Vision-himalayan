@@ -23,10 +23,4 @@ export class GalleryComponent implements OnInit {
         return this.images = res;
       });
   }
-
-  tripId(trip_id) {
-    this.route.navigate([`/package-detail/${trip_id}`]);
-  }
-
-
 }
