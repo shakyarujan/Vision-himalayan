@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppService } from './service/app.service';
 
 import { Daterangepicker } from 'ng2-daterangepicker';
+
 import { routes } from './app.routing';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';

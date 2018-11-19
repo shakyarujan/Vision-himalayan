@@ -5,7 +5,6 @@
         <img src="../../assets/img/gallery-bg.png" alt="" class="gallery-img">
         <div class="gallery-bg"></div>
     </div>
-
     <div class="p-b-25 p-t-15">
         <div class="container">
             <div class="row m-b-30 mbr-white">
@@ -18,56 +17,11 @@
             </div>
             <div class="row wrapper m-b-30">
 
-                <div class="gallery-item col-sm-12 col-md-4 col-lg-4">
-                    <a href="#">
-                        <img src="../../assets/img/everest.png" class="img-responsive">
+                <div class="gallery-item col-sm-12 col-md-4 col-lg-4" *ngFor="let image of images">
+                    <a href="#" [routerLink]="['/package-detail' , image.trip_id]" routerLinkActive="router-link-active" >
+                        <img src="{{ image.cover_photo }}" class="img-responsive">
                         <div class="figcaption">
-                            <h4 class="title">Package Title</h4>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="gallery-item col-sm-12 col-md-4 col-lg-4">
-                    <a href="#">
-                        <img src="../../assets/img/himalayan-2.png" class="img-responsive">
-                        <div class="figcaption">
-                            <h4 class="title">Package Title</h4>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="gallery-item col-sm-12 col-md-4 col-lg-4">
-                    <a href="#">
-                        <img src="../../assets/img/water.png" class="img-responsive">
-                        <div class="figcaption">
-                            <h4 class="title">Package Title</h4>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="gallery-item col-sm-12 col-md-4 col-lg-4">
-                    <a href="#">
-                        <img src="../../assets/img/buddhism.png" class="img-responsive">
-                        <div class="figcaption">
-                            <h4 class="title">Package Title</h4>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="gallery-item col-sm-12 col-md-4 col-lg-4">
-                    <a href="#">
-                        <img src="../../assets/img/mountain.png" class="img-responsive">
-                        <div class="figcaption">
-                            <h4 class="title">Package Title</h4>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="gallery-item col-sm-12 col-md-4 col-lg-4">
-                    <a href="#">
-                        <img src="../../assets/img/mountain-annupurna.png" class="img-responsive">
-                        <div class="figcaption">
-                            <h4 class="title">Package Title</h4>
+                            <h4 class="title">{{ image.name }}</h4>
                         </div>
                     </a>
                 </div>
