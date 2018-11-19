@@ -1,9 +1,30 @@
 /* section-treking-info */
 
 .treking .container .row .wrapper {
-    margin: 10px 0 0;
+    margin: 10px 0;
 }
 
-.treking .row .img {
+.treking .wrapper .img,
+.treking .wrapper a .block-title {
+    transition: all 0.4s ease;
+}
+
+.treking .wrapper .img {
     border-radius: 50%;
+}
+
+.treking .wrapper a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.treking .wrapper a:hover .img {
+    transform: scale(1.05);
+}
+
+.treking .wrapper a:hover .block-title {
+    color: rgba(0, 0, 0, 1);
 }
