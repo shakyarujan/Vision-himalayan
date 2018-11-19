@@ -25,9 +25,90 @@ div.img img {
     transition: all 0.4s ease;
 }
 
-div.img:hover img div.img:hover img {
-    transform: scale(1.1);
+div.img:hover img {
+    transform: scale(1.05);
 }
+
+
+/* book now modal */
+
+.range_inputs button {
+    border-color: transparent;
+    transition: all 0.4s ease;
+}
+
+.range_inputs button:hover {
+    border-color: transparent;
+    transform: scale(1.05);
+}
+
+.range_inputs .applyBtn {
+    color: #000;
+    background: #21b5ff;
+    border-color: transparent;
+}
+
+.range_inputs .applyBtn:hover {
+    color: #fff;
+}
+
+.daterangepicker .input-mini.active {
+    border: 1px solid #21b5ff !important;
+}
+
+.daterangepicker td.active,
+.daterangepicker td.active:hover {
+    background-color: #21b5ff !important;
+}
+
+.daterangepicker td:hover {
+    background: #ccc !important;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+    border-color: rgba(33, 181, 255, 1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6);
+    outline: 0 none;
+}
+
+.btn:focus,
+.btn.focus {
+    box-shadow: none;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #aaaaaa;
+}
+
+.modal-content {
+    border: 0;
+    border-color: transparent;
+}
+
+
+/* book now modal closed*/
 
 
 /* for navbar-bg */
@@ -130,7 +211,8 @@ h3.intro-heading {
 /* about and package detail page */
 
 .main-title {
-    border-bottom: 2px solid #21b5ff;
+    // display: inline-block;
+    // border-bottom: 8px solid #212529
 }
 
 h2.intro-heading {
@@ -166,6 +248,11 @@ h2.intro-heading {
     margin-bottom: 20px;
 }
 
+.feature-package-wrapper .feature-item:nth-child(1),
+.recommended-package-wrapper .destination-item:nth-child(1) {
+    margin-top: 0;
+}
+
 .destination-item,
 .feature-item {
     display: flex;
@@ -184,7 +271,7 @@ h2.intro-heading {
 
 .destination-item:hover,
 .feature-item:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .destination-item .img-wrapper img,
@@ -203,7 +290,7 @@ h2.intro-heading {
 
 .destination-item:hover div>img,
 .feature-item:hover div>img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .about-wrapper .feature-wrapper a {
@@ -229,13 +316,15 @@ h2.intro-heading {
 }
 
 @media (min-width: 992px) {
-    .item-detail .pricing span:last-child {
+    .destination-wrapper .item-detail .pricing span:last-child,
+    .feature-wrapper .item-detail .pricing span:last-child {
         float: none;
     }
 }
 
 @media (min-width: 768px) {
-    .item-detail .pricing span:last-child {
+    .destination-wrapper .item-detail .pricing span:last-child,
+    .feature-wrapper .item-detail .pricing span:last-child {
         float: none;
     }
     .destination-wrapper .pricing span,
@@ -246,7 +335,8 @@ h2.intro-heading {
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
-    .item-detail .pricing span:last-child {
+    .destination-wrapper .item-detail .pricing span:last-child,
+    .feature-wrapper .item-detail .pricing span:last-child {
         float: right;
     }
     .destination-wrapper .pricing span,
@@ -306,7 +396,7 @@ h2.intro-heading {
 
 .mbr-black:hover {
     color: #fff !important;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .no-padding {
