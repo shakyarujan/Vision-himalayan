@@ -56,11 +56,11 @@
                         <div class="pricing-detail">
                             <h3>
                                 <span class="starting-price">Starting Price from</span>
-                                <span class="cost">- {{ trip.price}}</span>
+                                <span class="cost"> Rs.{{ trip.price}}/-</span>
                                 <span class="duration">{{ trip.duration}}</span>
                                 <span class="destination">{{ trip.name }}</span>
                             </h3>
-                        </div>
+                          </div>
                         <div class="tour-brief">
                             <ul>
                                 <li>
@@ -98,10 +98,10 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="mailto:booking@smartholidaysnp.com">
+                                    <a href="mailto:{{ trip.email }}">
                                         <span>
                       <i class="fas fa-envelope"></i>
-                    </span> booking@smartholidaysnp.com
+                    </span> {{ trip.email }}
                                     </a>
                                 </li>
                             </ul>
@@ -156,15 +156,15 @@
                         </div>
                         <div class="call-back recommended-package">
                             <h4>Recommended Package</h4>
-                            <div class="recommended-package-wrapper">
+                            <div class="recommended-package-wrapper" >
                                 <div class="destination-item">
                                     <div class="destination-wrapper">
                                         <div class="img-wrapper">
                                             <img src="../../assets/img/maldives.png" alt="image">
                                         </div>
                                         <div class="floating-btn cta-btn md-pr-30 xs-no-padding">
-                                            <a class="btn bg-primarycolor mbr-black btn-sm text-uppercase" href="#"> 
-                                                View Detail 
+                                            <a class="btn bg-primarycolor mbr-black btn-sm text-uppercase" href="#">
+                                                View Detail
                                             </a>
                                         </div>
                                         <div class="description">
@@ -190,8 +190,8 @@
                                             <img src="../../assets/img/maldives-2.png" alt="image">
                                         </div>
                                         <div class="floating-btn cta-btn md-pr-30 xs-no-padding">
-                                            <a class="btn bg-primarycolor mbr-black btn-sm text-uppercase" href="#"> 
-                                                View Detail 
+                                            <a class="btn bg-primarycolor mbr-black btn-sm text-uppercase" href="#">
+                                                View Detail
                                             </a>
                                         </div>
                                         <div class="description">
@@ -223,10 +223,10 @@
         <div class="container">
             <!-- Modal -->
             <div class="modal fade bd-example-modal-lg" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog modal-lg" role="document">
+                <div class="modal-dialog modal-dialog modal-lg" role="document" *ngFor="let trip of tripsData">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title col-12" id="exampleModalLongTitle">Amazing Chilli</h5>
+                            <h5 class="modal-title col-12" id="exampleModalLongTitle">{{ trip.name }}</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -269,17 +269,17 @@
                                             </div>
                                             <div class="col-md-6 form-group">
                                                 <label for="contactNumber">Mobile Number*</label>
-                                                <input class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="contactNumber" id="contactNumber" name="contactNumber" placeholder="Enter Mobile Number..." type="number">
+                                                <input class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="contactNumber" id="contactNumber" name="contactNumber" placeholder="Enter Mobile Number..." type="number"  >
                                             </div>
                                             <div class="col-md-6 form-group">
-                                                <span class="error" id="mobileNumberLength"></span>
+                                                <span class="error" id="mobileNumberLength" ></span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-check book">
                                         <label>
-                                            <input id="termsCheck" name="termsCheck" required="" type="checkbox"> I agree to the 
-                                            <a routerlink="/terms" target="_blank" href="#/terms">Terms and Conditions</a> and 
+                                            <input id="termsCheck" name="termsCheck" required="" type="checkbox"> I agree to the
+                                            <a routerlink="/terms" target="_blank" href="#/terms">Terms and Conditions</a> and
                                             <a target="_blank">Privacy Policy</a>
                                         </label>
                                     </div>
