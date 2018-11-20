@@ -9,18 +9,9 @@ import { AppService } from '../service/app.service';
 })
 export class HeaderComponent implements OnInit {
 
-  imageset: any = [];
-  url = 'url(../../assets/img/himalayan-2.png)';
-
   constructor(private appService: AppService ) { }
 
   ngOnInit() {
-    this.getImage();
-  }
-
-  getImage() {
-
-    console.log('..................................................');
   }
 
 }

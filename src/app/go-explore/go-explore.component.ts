@@ -19,6 +19,7 @@ export class GoExploreComponent implements OnInit {
 
   tripData() {
     this.appService.getTripsData().subscribe(res => {
+      console.log(res[1]);
       return this.trips = res;
     });
   }
@@ -26,6 +27,5 @@ export class GoExploreComponent implements OnInit {
   tripId(trip_id) {
     this.router.navigate([`/package-detail/${trip_id}`]);
   }
-
 
 }
