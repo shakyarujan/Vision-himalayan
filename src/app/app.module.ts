@@ -21,11 +21,14 @@ import { TrekkingComponent } from './trekking/trekking.component';
 import { TrekkingInnerpageComponent } from './trekking-innerpage/trekking-innerpage.component';
 import { ExeditionComponent } from './exedition/exedition.component';
 import { ExpeditionInnerpageComponent } from './expedition-innerpage/expedition-innerpage.component';
-import { ContactusFooterComponent } from './contactus-footer/contactus-footer.component';
 import { PackageDetailComponent } from './package-detail/package-detail.component';
 import { PackageDetailInnerpageComponent } from './package-detail-innerpage/package-detail-innerpage.component';
 import { AboutComponent } from './about/about.component';
 import { AboutInnerpageComponent } from './about-innerpage/about-innerpage.component';
+import { ContactComponent } from './contact/contact.component';
+import { ContactusCurveBgComponent } from './contactus-curve-bg/contactus-curve-bg.component';
+import { ContactusFooterSocialComponent } from './contactus-footer-social/contactus-footer-social.component';
+import { ContactusFooterAddressComponent } from './contactus-footer-address/contactus-footer-address.component';
 
 @NgModule({
   declarations: [
@@ -44,11 +47,14 @@ import { AboutInnerpageComponent } from './about-innerpage/about-innerpage.compo
     TrekkingInnerpageComponent,
     ExeditionComponent,
     ExpeditionInnerpageComponent,
-    ContactusFooterComponent,
     PackageDetailComponent,
     PackageDetailInnerpageComponent,
     AboutComponent,
     AboutInnerpageComponent,
+    ContactComponent,
+    ContactusCurveBgComponent,
+    ContactusFooterSocialComponent,
+    ContactusFooterAddressComponent,
   ],
   imports: [
     BrowserModule,

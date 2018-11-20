@@ -1,0 +1,70 @@
+.curve-bg {
+    position: relative;
+    padding: 25px;
+    overflow: hidden;
+}
+
+.contactus-bg-wrapper img.contactus-img {
+    width: 100%;
+    height: 100%;
+}
+
+.contactus-bg-wrapper {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-clip-path: ellipse(90% 90% at 50% 0%);
+    clip-path: ellipse(90% 90% at 50% 0%);
+    -webkit-shape-outside: ellipse(90% 90% at 50% 0%);
+    shape-outside: ellipse(90% 90% at 50% 0%);
+    -webkit-shape-margin: 2em;
+    shape-margin: 2em;
+    opacity: 1;
+}
+
+.contactus-bg {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 1);
+    opacity: 0.4;
+}
+
+.curve-bg-container h3 {
+    text-align: center;
+    font-weight: 700;
+}
+
+.curve-bg-container span {
+    display: block;
+}
+
+.location-img {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.location-mark {
+    margin: 3em 0 0!important;
+}
+
+.location-img img {
+    width: 90px;
+}
+
+@media (max-width: 480px) {
+    .contactus-bg {
+        -webkit-clip-path: ellipse(140% 90% at 50% 0%);
+        clip-path: ellipse(140% 90% at 50% 0%);
+        -webkit-shape-outside: ellipse(140% 90% at 50% 0%);
+        shape-outside: ellipse(140% 90% at 50% 0%);
+        -webkit-shape-margin: 2em;
+        shape-margin: 2em;
+    }
+}

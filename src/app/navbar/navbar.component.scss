@@ -4,6 +4,7 @@
     display: block;
     padding: 0;
     background-color: rgba(0, 0, 0, 0.39) !important;
+    -webkit-box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
     box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
 }
 
@@ -19,6 +20,8 @@
         display: none !important;
     }
     a.navbar-brand {
+        -webkit-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
         transform: translateY(-5px);
     }
     .bottom {
@@ -65,10 +68,14 @@
     bottom: 0;
     border-bottom: 3px solid rgba(23, 162, 184, 0);
     opacity: 1;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
 
 .navbar-dark .navbar-nav .nav-link {
+    -webkit-transition: all 0.2s ease !important;
+    -o-transition: all 0.2s ease !important;
     transition: all 0.2s ease !important;
 }
 
@@ -85,6 +92,8 @@
 
 .contact a {
     color: #fff;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
 
@@ -160,6 +169,8 @@ ul.social {
 
 ul.social li.nav-item {
     margin: 0 5px;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
 
@@ -221,6 +232,8 @@ ul.login li {
         display: none !important;
     }
     .bottom .col-lg-12 {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 }
