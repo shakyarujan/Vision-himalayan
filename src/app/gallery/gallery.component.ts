@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../service/app.service';
+import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-gallery',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleryComponent implements OnInit {
 
-  constructor() { }
+  images: any = [];
+
+  constructor(private appService: AppService, private route: Router) { }
 
   ngOnInit() {
+    this.getImages();
   }
 
+  getImages() {
+      this.appService.getImages().subscribe(res => {
+        return this.images = res;
+      });
+  }
 }
