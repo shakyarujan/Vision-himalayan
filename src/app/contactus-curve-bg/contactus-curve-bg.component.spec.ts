@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContactusFooterComponent } from './contactus-footer.component';
+import { ContactusCurveBgComponent } from './contactus-curve-bg.component';
 
-describe('ContactusFooterComponent', () => {
-  let component: ContactusFooterComponent;
-  let fixture: ComponentFixture<ContactusFooterComponent>;
+describe('ContactusCurveBgComponent', () => {
+  let component: ContactusCurveBgComponent;
+  let fixture: ComponentFixture<ContactusCurveBgComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContactusFooterComponent ]
+      declarations: [ ContactusCurveBgComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ContactusFooterComponent);
+    fixture = TestBed.createComponent(ContactusCurveBgComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

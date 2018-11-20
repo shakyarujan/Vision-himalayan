@@ -37,22 +37,36 @@
 }
 
 .explore .row .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     margin: 15px auto;
+    -webkit-box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
     box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
     background: #fff;
     line-height: 1.4;
     border-radius: 10px;
     overflow: hidden;
     z-index: 0;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 30%;
     flex: 0 0 30%;
     max-width: 30%;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
     transform-origin: center;
 }
 
 .explore .row .wrapper:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
     transform: scale(1.05);
 }
 
@@ -60,11 +74,17 @@
     position: relative;
     height: 100%;
     width: 100%;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
     transform-origin: center;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
 
 .explore .row .wrapper:hover div>img {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
     transform: scale(1.05);
 }
 
@@ -83,12 +103,15 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
 }
 
 @media (max-width: 768px) {
     .explore .row .wrapper {
         max-width: 100%;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     }
 }

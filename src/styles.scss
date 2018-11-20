@@ -21,11 +21,16 @@ div.img,
 
 div.img img {
     -webkit-transform-origin: center;
+    -ms-transform-origin: center;
     transform-origin: center;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
 
 div.img:hover img {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
     transform: scale(1.05);
 }
 
@@ -34,11 +39,15 @@ div.img:hover img {
 
 .range_inputs button {
     border-color: transparent;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
 
 .range_inputs button:hover {
     border-color: transparent;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
     transform: scale(1.05);
 }
 
@@ -88,23 +97,30 @@ input[type="tel"]:focus,
 input[type="color"]:focus,
 .uneditable-input:focus {
     border-color: rgba(33, 181, 255, 1);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6);
+    box-shadow: none;
     outline: 0 none;
 }
 
 .btn:focus,
 .btn.focus {
+    -webkit-box-shadow: none;
     box-shadow: none;
 }
 
 .form-control:focus {
+    border-color: rgba(33, 181, 255, 1);
     box-shadow: none;
-    border-color: #aaaaaa;
+    outline: 0 none;
 }
 
 .modal-content {
     border: 0;
     border-color: transparent;
+}
+
+button.close {
+    opacity: 1 !important;
+    color: #fff !important;
 }
 
 
@@ -150,6 +166,8 @@ h3.intro-heading {
 
 .trekking-item,
 .expedition-item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
 }
@@ -172,6 +190,8 @@ h3.intro-heading {
 @media (min-width: 768px) {
     .trekking-item,
     .expedition-item {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
         flex: 0 0 40%;
         max-width: 40%;
     }
@@ -187,6 +207,8 @@ h3.intro-heading {
 @media (min-width: 992px) {
     .trekking-item,
     .expedition-item {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
         flex: 0 0 30%;
         max-width: 30%;
     }
@@ -195,6 +217,8 @@ h3.intro-heading {
 @media (max-width: 480px) {
     .trekking-item,
     .expedition-item {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
         flex: 0 0 100%;
         max-width: 100%;
     }
@@ -255,9 +279,15 @@ h2.intro-heading {
 
 .destination-item,
 .feature-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     margin: 3em auto;
+    -webkit-box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
     box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
     background: #fff;
     line-height: 1.4;
@@ -265,12 +295,17 @@ h2.intro-heading {
     overflow: hidden;
     z-index: 0;
     -webkit-transform-origin: center;
+    -ms-transform-origin: center;
     transform-origin: center;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
 
 .destination-item:hover,
 .feature-item:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
     transform: scale(1.05);
 }
 
@@ -279,7 +314,10 @@ h2.intro-heading {
     width: 100%;
     height: 100%;
     -webkit-transform-origin: center;
+    -ms-transform-origin: center;
     transform-origin: center;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
 
@@ -290,11 +328,15 @@ h2.intro-heading {
 
 .destination-item:hover div>img,
 .feature-item:hover div>img {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
     transform: scale(1.05);
 }
 
 .about-wrapper .feature-wrapper a {
     text-decoration: none;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
     letter-spacing: 1px;
     margin: 10px 0;
@@ -381,21 +423,29 @@ h2.intro-heading {
 }
 
 .btn {
+    -webkit-box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
     box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
 }
 
 .btn:hover {
+    -webkit-box-shadow: 0px 4px 10px -7px rgba(0, 0, 0, 1);
     box-shadow: 0px 4px 10px -7px rgba(0, 0, 0, 1);
 }
 
 .mbr-black {
     color: #000;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
     transform-origin: center;
 }
 
 .mbr-black:hover {
     color: #fff !important;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
     transform: scale(1.05);
 }
 

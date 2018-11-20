@@ -1,0 +1,31 @@
+.contact {
+    position: relative;
+    overflow: hidden;
+}
+
+section.contact-form .container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+section.contact-form {
+    padding: 3em 0;
+}
+
+section.contact-form form .row {
+    margin: 10px 0 20px;
+}
+
+section.contact-form form label {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.address-section ul li {
+    word-break: break-word;
+}
+
+section.contact-form form #sendBtn {
+    letter-spacing: 1px;
+}
