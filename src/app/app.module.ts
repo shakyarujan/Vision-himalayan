@@ -1,10 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { Daterangepicker } from 'ng2-daterangepicker';
 
 import { AppService } from './service/app.service';
-
-import { Daterangepicker } from 'ng2-daterangepicker';
 
 import { routes } from './app.routing';
 import { AppComponent } from './app.component';
@@ -59,6 +59,8 @@ import { ContactusFooterAddressComponent } from './contactus-footer-address/cont
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     routes,
     Daterangepicker

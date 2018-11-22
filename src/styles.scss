@@ -159,9 +159,7 @@ h3.intro-heading {
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 5;
-    /* autoprefixer: off */
     -webkit-box-orient: vertical;
-    /* autoprefixer: on */
 }
 
 .trekking-item,
@@ -233,11 +231,6 @@ h3.intro-heading {
 
 
 /* about and package detail page */
-
-.main-title {
-    // display: inline-block;
-    // border-bottom: 8px solid #212529
-}
 
 h2.intro-heading {
     font-weight: 900;
@@ -495,3 +488,5 @@ h2.intro-heading {
 .container .row {
     margin: 0 auto;
 }
+
+
