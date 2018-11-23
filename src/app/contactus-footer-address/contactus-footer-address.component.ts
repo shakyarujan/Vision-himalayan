@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../service/app.service';
 
 @Component({
   selector: 'app-contactus-footer-address',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactusFooterAddressComponent implements OnInit {
 
-  constructor() { }
+  info: any = [];
+
+  constructor(private appService: AppService) { }
 
   ngOnInit() {
+    this.appService.getSiteInfo().subscribe(res => {
+      return this.info = res;
+    });
   }
 
 }

@@ -38,7 +38,11 @@ export class AppService {
     return this.http.get(`${this.uri}/trip/all`);
   }
 
-  addBooking(user_id, date, adult, children, fullname, email, mobile){
+  getImagesId(trip_id) {
+    return this.http.get(`${this.uri}/trip/image/${trip_id}`);
+  }
+
+  addBooking(user_id, date, adult, children, fullname, email, mobile) {
     const book = {
       user_id: user_id,
       date: date,

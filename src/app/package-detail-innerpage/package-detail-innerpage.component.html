@@ -216,44 +216,70 @@
                                     <div class="form-group">
                                         <h3 class="sub-title">Number of Travelers</h3>
                                         <div class="form-group row traveler-no">
-                                            <div class="col-md-6 form-group">
-                                                <label for="adults">Adults*</label>
-                                                <input class="form-control" formControlName="adults" id="adults"  placeholder="No. of adults..." type="number" [ngClass]="">
+
+                                          <div class="col-md-6 form-group">
+                                            <label for="adults">Adults*</label>
+                                            <input class="form-control" formControlName="adults" id="adults"  placeholder="No. of adults..." type="number"
+                                            [ngClass]="{'form-control': true, 'is-invalid': !adults.valid && adults.touched, 'is-valid': adults.valid}"
+                                            />
+                                            <div *ngIf="adults.errors?.required && adults.touched" class="form-text alert alert-danger">
+                                              Field is required
                                             </div>
-                                            <div class="col-md-6 form-group">
-                                                <label for="childrens">Childrens*</label>
-                                                <input class="form-control" formControlName="childrens" id="childrens"  placeholder="No. of childrens..." type="number">
-                                            </div>
+                                          </div>
+
+                                          <div class="col-md-6 form-group">
+                                              <label for="childrens">Childrens*</label>
+                                              <input class="form-control" formControlName="childrens" id="childrens"  placeholder="No. of childrens..." type="number">
+                                          </div>
+
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <h3 class="sub-title">Trip Leader Detail</h3>
                                         <div class="form-group row trip-detail">
-                                            <div class="col-md-6 form-group">
-                                                <label for="contactName">Full Name*</label>
-                                                <input class="form-control" formControlName="contactName" id="contactName" placeholder="Enter Full Name ..." type="text"
-                                                 />
+
+                                          <div class="col-md-6 form-group">
+                                            <label for="contactName">Full Name*</label>
+                                            <input class="form-control" formControlName="contactName" id="contactName" placeholder="Enter Full Name ..." type="text"
+                                            [ngClass]="{'form-control': true, 'is-invalid': !contactName.valid && contactName.touched, 'is-valid': contactName.valid}"
+                                            />
+                                            <div *ngIf="contactName.errors?.required && contactName.touched" class="alert alert-danger">
+                                                Fields is required.
                                             </div>
-                                            <div class="col-md-6 form-group">
-                                              <label for="contactName">Email*</label>
-                                              <input class="form-control" formControlName="contactEmail" id="contactEmail" placeholder="Enter email address ..." type="text" />
+                                            <div *ngIf="contactName.errors?.pattern && (contactName.touched || contactName.dirty)" class="alert alert-danger">
+                                              Name should be atleast 2 characters.
                                             </div>
-                                            <div *ngIf="bookingForm.get('contactEmail').invalid"  class="alert alert-danger">               
-                                              Email is invalid.               
-                                            </div>   
-                                            <div *ngIf="bookingForm.get('contactEmail').errors?.required &&  bookingForm.get('contactEmail').touched" class="alert alert-danger">               
-                                                Email is required.               
-                                            </div> 
-                                            <div class="col-md-6 form-group">
-                                              <label for="contactName">Phone Number*</label>
-                                              <input class="form-control" formControlName="contactNumber" id="contactNumber" placeholder="Enter Mobile Number ..." type="text"
-                                              />
+                                          </div>
+
+                                          <div class="col-md-6 form-group">
+                                            <label for="contactEmail">Email*</label>
+                                            <input formControlName="contactEmail" id="contactEmail" placeholder="Enter email address ..." type="text"
+                                            [ngClass]="{'form-control': true, 'is-invalid': !contactEmail.valid && (contactEmail.touched), 'is-valid': contactEmail.valid}"
+                                            />
+                                            <div *ngIf="contactEmail.errors?.required && (contactEmail.touched || contactEmail.dirty)" class="alert alert-danger">
+                                                Fields is required.
                                             </div>
-                                            <div class="col-md-6 form-group">
-                                                <span class="error" id="mobileNumberLength" ></span>
+                                            <div *ngIf="contactEmail.errors?.pattern && contactEmail.touched" class="alert alert-danger">
+                                                Invalid email address.
                                             </div>
+                                          </div>
+
+                                          <div class="col-md-6 form-group">
+                                            <label for="contactNumber">Phone Number*</label>
+                                            <input formControlName="contactNumber" id="contactNumber" placeholder="Enter Mobile Number ..." type="number" maxLength="10"
+                                            [ngClass]="{'form-control': true, 'is-invalid': !contactNumber.valid && contactNumber.touched, 'is-valid': contactNumber.valid}"
+                                            />
+                                            <div *ngIf="contactNumber.errors?.maxlength && contactNumber.touched " class="alert alert-danger">
+                                                Must be a valid 10 digit phone number
+                                            </div>
+                                            <div *ngIf="contactNumber.errors?.required && (contactNumber.touched || contactEmail.dirty)" class="alert alert-danger">
+                                                Fields is required.
+                                            </div>
+                                          </div>
+
                                         </div>
                                     </div>
+
                                     <div class="form-check book">
                                         <label>
                                             <input id="termsCheck" name="termsCheck" required="" type="checkbox"> I agree to the
@@ -261,15 +287,11 @@
                                             <a target="_blank">Privacy Policy</a>
                                         </label>
                                     </div>
-                                    <button class="btn bg-primarycolor mbr-black btn-sm text-uppercase" id="confirmBttn" type="submit" value="Book">Book</button>
+                                    <button class="btn bg-primarycolor mbr-black btn-sm text-uppercase" id="confirmBttn" type="submit" value="Book" [disabled]="!bookingForm.valid" (click)="booked()">Book</button>
                                     <button class="btn btn-sm text-uppercase modal-close-btn pull-right" data-dismiss="modal" type="button">Close</button>
                                 </div>
                               </form>
                         </div>
-                        <!-- <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Book</button>
-                        </div> -->
                     </div>
                 </div>
             </div>

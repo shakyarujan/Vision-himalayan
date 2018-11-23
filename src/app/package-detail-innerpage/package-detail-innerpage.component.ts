@@ -35,17 +35,40 @@ export class PackageDetailInnerpageComponent implements OnInit {
     this.itineraryDetails();
 
     this.bookingForm = this.fb.group({
-      user_id: '',
-      date: ['', Validators.required],
-      adults: ['', Validators.required],
-      childrens: ['', Validators.required],
-      contactName: ['', Validators.required],
-      contactEmail: ['', Validators.required, Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')],
-      contactNumber: ['', Validators.required, Validators.pattern('[0-9]{0-10}')]
+      user_id: null,
+      date: [null, Validators.required],
+      adults: [null, Validators.required],
+      childrens: [null, Validators.required],
+      contactName: [null, [Validators.required, Validators.minLength(2)]],
+      contactEmail: [null, Validators.compose([Validators.required, Validators.pattern('^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,6})$')])],
+      contactNumber: [null, Validators.compose([Validators.required, Validators.maxLength(10), Validators.pattern('^[0-9]{10}$')])]
     });
   }
 
+  get date() {
+    return this.bookingForm.get('date');
+  }
 
+  get adults() {
+    return this.bookingForm.get('adults');
+  }
+
+  get childrens() {
+    return this.bookingForm.get('childrens');
+  }
+
+
+  get contactName() {
+    return this.bookingForm.get('contactName');
+  }
+
+  get contactEmail() {
+    return this.bookingForm.get('contactEmail');
+  }
+
+  get contactNumber() {
+    return this.bookingForm.get('contactNumber');
+  }
 
   onsubmit(fb: FormGroup) {
   //   console.log(this.bookingForm);
@@ -68,8 +91,43 @@ export class PackageDetailInnerpageComponent implements OnInit {
   //     }
   //   });
 
-  console.log(fb.value);
+  // console.log(fb.value);
+
   }
+  booked() {
+    console.log(this.bookingForm);
+    // console.log('Final Value', this.user);
+  }
+
+
+  // addBooking(user_id, date, adult, children, fullname, email, mobile) {
+  //   this.appService.addBooking(user_id, date, adult, children, fullname, email, mobile).subscribe(() => {
+  //     this.router.navigate([`/package-detail/${user_id}`]);
+  //   });
+  // }
+
+  selectedDate(value: any) {
+    this.daterange.start = value.start;
+    this.daterange.end = value.end;
+
+    console.log(this.daterange.start, this.daterange.stop);
+  }
+
+  public calendarCanceled(e: any) {
+    console.log(e);
+    // e.event
+    // e.picker
+  }
+
+  public calendarApplied(e: any) {
+    console.log(e);
+    // e.event
+    // e.picker
+  }
+
+
+
+  // API fetching part
 
   tripData() {
     this.appService.getTripsData().subscribe(res => {
@@ -94,32 +152,6 @@ export class PackageDetailInnerpageComponent implements OnInit {
         this.itineraryData = res;
       });
     });
-  }
-
-
-  // addBooking(user_id, date, adult, children, fullname, email, mobile) {
-  //   this.appService.addBooking(user_id, date, adult, children, fullname, email, mobile).subscribe(() => {
-  //     this.router.navigate([`/package-detail/${user_id}`]);
-  //   });
-  // }
-
-    selectedDate(value: any) {
-        this.daterange.start = value.start;
-        this.daterange.end = value.end;
-
-        console.log(this.daterange.start, this.daterange.stop);
-    }
-
-    public calendarCanceled(e: any) {
-      console.log(e);
-      // e.event
-      // e.picker
-  }
-
-  public calendarApplied(e: any) {
-      console.log(e);
-      // e.event
-      // e.picker
   }
 
 }

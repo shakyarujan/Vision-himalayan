@@ -9,9 +9,16 @@ import { AppService } from '../service/app.service';
 })
 export class HeaderComponent implements OnInit {
 
+  images: any = [];
+
   constructor(private appService: AppService ) { }
 
   ngOnInit() {
+    this.appService.getImagesId(3).subscribe(res => {
+      return this.images = res;
+    });
+
+
   }
 
 }
