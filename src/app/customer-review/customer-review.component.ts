@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../service/app.service';
 
 @Component({
   selector: 'app-customer-review',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerReviewComponent implements OnInit {
 
-  constructor() { }
+  constructor(private appService: AppService) { }
 
   ngOnInit() {
+    // this.userReview();
   }
+
+
+  // userReview() {
+  //   return this.appService.getReview();
+  // }
 
 }

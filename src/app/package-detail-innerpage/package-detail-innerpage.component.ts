@@ -28,12 +28,11 @@ export class PackageDetailInnerpageComponent implements OnInit {
   constructor(private appService: AppService, private router: Router, private route: ActivatedRoute,
     private daterangepickerOptions: DaterangepickerConfig, private fb: FormBuilder) {
 
+      // this.recommendedPackages = [];
     this.daterangepickerOptions.settings = {
       locale: { format: 'YYYY-MM-DD' },
       alwaysShowCalendars: false
     };
-
-    console.log('...........adsf.......');
 
     this.route.params.subscribe(params => {
       this.id = params.id;
@@ -44,9 +43,8 @@ export class PackageDetailInnerpageComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.tripDetail();
     this.itineraryDetails();
-    this.recommendedPackages = [];
+
     this.bookingForm = this.fb.group({
       user_id: null,
       date: [null, Validators.required],
@@ -59,26 +57,26 @@ export class PackageDetailInnerpageComponent implements OnInit {
   }
 
   packages(id) {
+    console.log('hello');
     this.appService.getTripId(id).subscribe((res: any) => {
       this.tripsData = res;
+
           this.tripType = this.tripsData[0].type;
 
           if (this.tripType == 'Inbound') {
 
             this.appService.getInboundData().subscribe((inbound: any) => {
               for ( let i = 0; i < inbound.length; i++ ) {
-                if ( this.id === inbound[i].trip_id ) {
+                if ( this.id == inbound[i].trip_id ) {
                   delete inbound[i];
                 }
-              }
 
-              // tslint:disable-next-line:no-shadowed-variable
-              for (let i = 0; i < inbound.length; i++) {
+              }
+              for ( let i = 0; i < inbound.length; i++) {
                 if ( inbound[i] != null ) {
                   this.recommendedPackages.push(inbound[i]);
                 }
               }
-
             });
           } else if (this.tripType == 'Outbound') {
             this.appService.getOutboundData().subscribe((outbound: any) => {
@@ -87,7 +85,6 @@ export class PackageDetailInnerpageComponent implements OnInit {
                   delete outbound[i];
                 }
               }
-
               for ( let i = 0; i < outbound.length; i++) {
                 if ( outbound[i] != null ) {
                   this.recommendedPackages.push(outbound[i]);
@@ -157,32 +154,21 @@ export class PackageDetailInnerpageComponent implements OnInit {
 
   // API fetching part
 
-  tripDetail() {
-    this.route.params.subscribe(params => {
-      this.id = params.id;
-      this.appService.getTripId(this.id).subscribe(res => {
-        this.tripsData = res;
-      });
-    });
-  }
-
   itineraryDetails() {
     this.route.params.subscribe(params => {
       this.id = params.id;
+
       this.appService.getItineraryData(this.id).subscribe(res => {
         this.itineraryData = res;
+        this.packages(this.id);
       });
     });
   }
 
-
-
-
   tripId(trip_id) {
-    this.packages(trip_id);
-    console.log('...........gjhgjhgjhgjhgjhg..........');
-    console.log(this.packages(trip_id));
+    this.recommendedPackages = [];
     this.router.navigate([`/package-detail/${trip_id}`]);
+
   }
 
 

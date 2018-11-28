@@ -10,6 +10,10 @@ export class AppService {
 
   constructor(private http: HttpClient ) { }
 
+  // getReview() {
+  //   return this.http.get(`${this.uri}/`);
+  // }
+
   getTripsData() {
     return this.http.get(`${this.uri}/trip/all`);
   }

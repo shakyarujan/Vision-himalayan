@@ -173,8 +173,8 @@
                                         <div class="img-wrapper">
                                             <img src="{{ trip.cover_photo}}" alt="image">
                                         </div>
-                                        <div class="floating-btn cta-btn md-pr-30 xs-no-padding" (click)="top()">
-                                            <a class="btn bg-primarycolor mbr-black btn-sm text-uppercase" (click)="tripId(trip.trip_id)" >
+                                        <div class="floating-btn cta-btn md-pr-30 xs-no-padding" >
+                                            <a class="btn bg-primarycolor mbr-black btn-sm text-uppercase" (click)="tripId(trip.trip_id)" (click)="top()" >
                                                 View Detail
                                             </a>
                                         </div>
@@ -309,5 +309,6 @@
         </div>
   </section>
 </section>
+
 
 
