@@ -61,25 +61,34 @@
                                 <span class="destination">{{ trip.name }}</span>
                             </h3>
                           </div>
-                        <div class="tour-brief">
-                            <ul>
-                                <li>
-                                    <span>Highest Altitude</span> {{ trip.altitude }}
-                                </li>
-                                <li>
-                                    <span>Trip Grade</span> {{ trip.rating }}
-                                </li>
-                                <li>
-                                    <span>Trip Difficulty</span> {{ trip.difficulty}}
-                                </li>
-                                <li>
-                                    <span>Trip Season</span> {{ trip.season }}
-                                </li>
-                                <li>
-                                    <span>Activities</span> {{ trip.keyword }}
-                                </li>
-                            </ul>
-                        </div>
+                          <div class="tour-brief">
+                              <ul>
+                                  <li>
+                                      <span>Highest Altitude</span>
+                                      <span class="pull-right">{{ trip.altitude }} </span>
+                                  </li>
+
+                                  <li>
+                                      <span>Trip Grade</span>
+                                      <span class="pull-right">{{ trip.rating }} </span>
+                                  </li>
+
+                                  <li>
+                                      <span>Trip Difficulty</span>
+                                      <span class="pull-right">{{ trip.difficulty}} </span>
+                                  </li>
+
+                                  <li>
+                                      <span>Trip Season</span>
+                                      <span class="pull-right">{{ trip.season }}</span>
+                                  </li>
+
+                                  <li>
+                                      <span>Activities</span>
+                                      <span class="pull-right">{{ trip.keyword }}</span>
+                                  </li>
+                              </ul>
+                          </div>
                         <div class="booking">
                             <h4>Booking Contact</h4>
                             <ul>
@@ -117,15 +126,16 @@
                         <div class="enquiry">
                             <h4>Enquiry</h4>
                             <div class="form-wrapper">
-                                <form action="">
+                                <form>
                                     <div class="form-group">
-                                        <input class="form-control custom-field" id="fname" placeholder="Full Name" type="text">
+                                        <input class="form-control custom-field" id="fname" placeholder="Full Name" tye="text"
+                                        />
                                     </div>
                                     <div class="form-group">
-                                        <input class="form-control custom-field" id="email" placeholder="Email" type="email">
+                                        <input class="form-control custom-field"  id="email" placeholder="Email" type="email" required="">
                                     </div>
                                     <div class="form-group">
-                                        <input class="form-control custom-field" id="contact" placeholder="Contact No." type="number">
+                                        <input class="form-control custom-field" id="contact" placeholder="Contact Number." type="number" required>
                                     </div>
                                     <div class="form-group">
                                         <input class="btn bg-primarycolor mbr-black btn-md text-uppercase" type="submit" value="Submit Now">
@@ -158,13 +168,13 @@
                         <div class="call-back recommended-package">
                             <h4>Recommended Package</h4>
                             <div class="recommended-package-wrapper">
-                                <div class="destination-item" *ngFor="let trip of trips | slice:0:2">
+                                <div class="destination-item" *ngFor="let trip of recommendedPackages | slice:0:2">
                                     <div class="destination-wrapper">
                                         <div class="img-wrapper">
                                             <img src="{{ trip.cover_photo}}" alt="image">
                                         </div>
-                                        <div class="floating-btn cta-btn md-pr-30 xs-no-padding">
-                                            <a class="btn bg-primarycolor mbr-black btn-sm text-uppercase" href="#" [routerLink]="['/package-detail',trip.trip_id]" routerLinkActive="router-link-active" >
+                                        <div class="floating-btn cta-btn md-pr-30 xs-no-padding" (click)="top()">
+                                            <a class="btn bg-primarycolor mbr-black btn-sm text-uppercase" (click)="tripId(trip.trip_id)" >
                                                 View Detail
                                             </a>
                                         </div>
@@ -255,6 +265,7 @@
                                             <label for="contactEmail">Email*</label>
                                             <input formControlName="contactEmail" id="contactEmail" placeholder="Enter email address ..." type="text"
                                             [ngClass]="{'form-control': true, 'is-invalid': !contactEmail.valid && (contactEmail.touched), 'is-valid': contactEmail.valid}"
+                                            (change)="fun(this.contactEmail)"
                                             />
                                             <div *ngIf="contactEmail.errors?.required && (contactEmail.touched || contactEmail.dirty)" class="alert alert-danger">
                                                 Fields is required.
@@ -269,10 +280,10 @@
                                             <input formControlName="contactNumber" id="contactNumber" placeholder="Enter Mobile Number ..." type="number" maxLength="10"
                                             [ngClass]="{'form-control': true, 'is-invalid': !contactNumber.valid && contactNumber.touched, 'is-valid': contactNumber.valid}"
                                             />
-                                            <div *ngIf="contactNumber.errors?.maxlength && contactNumber.touched " class="alert alert-danger">
+                                            <div *ngIf="contactNumber.errors?.pattern && contactNumber.touched " class="alert alert-danger">
                                                 Must be a valid 10 digit phone number
                                             </div>
-                                            <div *ngIf="contactNumber.errors?.required && (contactNumber.touched || contactEmail.dirty)" class="alert alert-danger">
+                                            <div *ngIf="contactNumber.errors?.required && (contactNumber.touched || contactNumber.dirty)" class="alert alert-danger">
                                                 Fields is required.
                                             </div>
                                           </div>
@@ -298,3 +309,5 @@
         </div>
   </section>
 </section>
+
+

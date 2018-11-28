@@ -13,8 +13,29 @@
 </head>
 
 <body>
-    <app-root></app-root>
+  <app-root></app-root>
+
+  <!-- back to top -->
+  <div id="back-to-top">
+    <i class="fas fa-angle-up"></i>
+  </div>
+
 </body>
 
 
+<script>
+  $('#back-to-top').on('click', function(){
+		$('body,html').animate({
+			scrollTop: 0
+		}, 600);
+	});
+
+  $(window).on('scroll', function() {
+		var wScroll = $(this).scrollTop();
+
+		// Back To Top Appear
+		wScroll > 700 ? $('#back-to-top').fadeIn() : $('#back-to-top').fadeOut();
+	});
+
+</script>
 </html>

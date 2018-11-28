@@ -3,6 +3,7 @@ import { AppService } from '../service/app.service';
 import { FormGroup, Validators, FormBuilder, FormControl } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { DaterangepickerConfig } from 'ng2-daterangepicker';
+import { iif } from 'rxjs';
 
 @Component({
   selector: 'app-package-detail-innerpage',
@@ -11,12 +12,16 @@ import { DaterangepickerConfig } from 'ng2-daterangepicker';
 })
 
 export class PackageDetailInnerpageComponent implements OnInit {
-
+  tripType; recommendedPackages = [];
   id: String;
+  typeId1: String;
+  typeId2: any = [];
   trips: any = [];
   tripsData: any = [];
   itineraryData: any = [];
   daterange: any = {};
+  inbound: any = [];
+  outbound: any = [];
 
   bookingForm: FormGroup;
 
@@ -26,22 +31,72 @@ export class PackageDetailInnerpageComponent implements OnInit {
     this.daterangepickerOptions.settings = {
       locale: { format: 'YYYY-MM-DD' },
       alwaysShowCalendars: false
-  };
+    };
+
+    console.log('...........adsf.......');
+
+    this.route.params.subscribe(params => {
+      this.id = params.id;
+      this.packages(this.id);
+    });
+
+
   }
 
   ngOnInit() {
-    this.tripData();
     this.tripDetail();
     this.itineraryDetails();
-
+    this.recommendedPackages = [];
     this.bookingForm = this.fb.group({
       user_id: null,
       date: [null, Validators.required],
       adults: [null, Validators.required],
       childrens: [null, Validators.required],
       contactName: [null, [Validators.required, Validators.minLength(2)]],
-      contactEmail: [null, Validators.compose([Validators.required, Validators.pattern('^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,6})$')])],
-      contactNumber: [null, Validators.compose([Validators.required, Validators.maxLength(10), Validators.pattern('^[0-9]{10}$')])]
+      contactEmail: [null, Validators.compose([Validators.required, Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')])],
+      contactNumber: [null, Validators.compose([Validators.required, Validators.pattern('^[0-9]{10}$')])]
+    });
+  }
+
+  packages(id) {
+    this.appService.getTripId(id).subscribe((res: any) => {
+      this.tripsData = res;
+          this.tripType = this.tripsData[0].type;
+
+          if (this.tripType == 'Inbound') {
+
+            this.appService.getInboundData().subscribe((inbound: any) => {
+              for ( let i = 0; i < inbound.length; i++ ) {
+                if ( this.id === inbound[i].trip_id ) {
+                  delete inbound[i];
+                }
+              }
+
+              // tslint:disable-next-line:no-shadowed-variable
+              for (let i = 0; i < inbound.length; i++) {
+                if ( inbound[i] != null ) {
+                  this.recommendedPackages.push(inbound[i]);
+                }
+              }
+
+            });
+          } else if (this.tripType == 'Outbound') {
+            this.appService.getOutboundData().subscribe((outbound: any) => {
+              for ( let i = 0; i < outbound.length; i++ ) {
+                if ( this.id == outbound[i].trip_id ) {
+                  delete outbound[i];
+                }
+              }
+
+              for ( let i = 0; i < outbound.length; i++) {
+                if ( outbound[i] != null ) {
+                  this.recommendedPackages.push(outbound[i]);
+                }
+              }
+            });
+          } else {
+            //nothing
+          }
     });
   }
 
@@ -71,25 +126,6 @@ export class PackageDetailInnerpageComponent implements OnInit {
   }
 
   onsubmit(fb: FormGroup) {
-  //   console.log(this.bookingForm);
-  //   if (this.bookingForm.valid) {
-  //     console.log('form submitted');
-  //   } else {
-  //     this.validateAllFormFields(this.bookingForm);
-  //   }
-  // }
-
-  // validateAllFormFields(formGroup: FormGroup) {
-  //   Object.keys(formGroup.controls).forEach(field => {
-  //     console.log(field);
-  //     console.log('...................');
-  //     const control = formGroup.get(field);
-  //     if (control instanceof FormControl) {
-  //       control.markAsTouched({ onlySelf: true });
-  //     } else if (control instanceof FormGroup) {
-  //       this.validateAllFormFields(control);
-  //     }
-  //   });
 
   // console.log(fb.value);
 
@@ -113,27 +149,13 @@ export class PackageDetailInnerpageComponent implements OnInit {
     console.log(this.daterange.start, this.daterange.stop);
   }
 
-  public calendarCanceled(e: any) {
-    console.log(e);
-    // e.event
-    // e.picker
+  fun(contactEmail) {
+    const uri = ('https://www.validator.pizza/email/') + contactEmail.value;
+    console.log(uri);
+
   }
-
-  public calendarApplied(e: any) {
-    console.log(e);
-    // e.event
-    // e.picker
-  }
-
-
 
   // API fetching part
-
-  tripData() {
-    this.appService.getTripsData().subscribe(res => {
-      return this.trips = res;
-    });
-  }
 
   tripDetail() {
     this.route.params.subscribe(params => {
@@ -148,9 +170,28 @@ export class PackageDetailInnerpageComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.id = params.id;
       this.appService.getItineraryData(this.id).subscribe(res => {
-        console.log(res);
         this.itineraryData = res;
       });
+    });
+  }
+
+
+
+
+  tripId(trip_id) {
+    this.packages(trip_id);
+    console.log('...........gjhgjhgjhgjhgjhg..........');
+    console.log(this.packages(trip_id));
+    this.router.navigate([`/package-detail/${trip_id}`]);
+  }
+
+
+  // Scroll to top
+  top() {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
     });
   }
 

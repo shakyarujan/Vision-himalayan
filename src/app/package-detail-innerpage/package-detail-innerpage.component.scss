@@ -1,272 +1,292 @@
 .detail-wrapper {
-    background-color: #ebebeb;
+  background-color: #ebebeb;
+  // color: #5f5f5f;
 }
 
 .detail-wrapper .img img {
-    width: 100%;
+  width: 100%;
 }
 
 .content-wrapper {
-    margin: 3em 0;
+  margin: 3em 0;
 }
 
-
+.offer-excludes,
+.offer-includes,
+.itinerary,
+.overview {
+  // margin-bottom: 30px;
+}
 
 .itinerary-item {
-    padding: 10px 0;
+  padding: 10px 0;
 }
 
 .itinerary-item h6 {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .itinerary-item h6 span {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .offer-excludes ul li,
 .offer-includes ul li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
-.pricing-detail {
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #dadada;
+.pricing-detail,
+.tour-brief,
+.booking,
+.enquiry,
+.call-back {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #bbb;
+}
+
+.call-back .form-control {
+  border: 1px solid #bbb;
 }
 
 .pricing-detail span {
-    display: block;
-    margin-bottom: 10px;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .pricing-detail span.starting-price,
 .pricing-detail span.cost {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .pricing-detail span.starting-price,
 .pricing-detail span.destination {
-    font-size: 14px;
-    color: #858585;
+  font-size: 14px;
+  color: #858585;
 }
 
 .pricing-detail span.duration {
-    font-size: 16px;
-    color: #858585;
+  font-size: 16px;
+  color: #858585;
 }
 
 .tour-brief {
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #dadada;
+  overflow: hidden;
 }
 
 .tour-brief ul li {
-    list-style-type: none;
-    padding-bottom: 10px;
-    font-size: 14px;
-    color: #858585;
+  list-style-type: none;
+  padding-bottom: 10px;
+  font-size: 14px;
+  // color: #858585;
+  display: block;
+  overflow: hidden;
 }
 
 .tour-brief ul li>span {
-    width: 130px;
-    display: inline-block;
-    font-weight: 700;
-    color: #5f5f5f;
+  width: auto;
+  display: inline-block;
+  font-weight: 700;
+  color: #5f5f5f;
+}
+
+.tour-brief ul li span.pull-right {
+  display: inline-block;
+  width: 46%;
+  color: #858585;
+  font-weight: 500;
+  word-break: break-word;
 }
 
 .booking h4,
 .enquiry h4,
 .call-back h4 {
-    font-size: 19px;
-    margin-bottom: 20px;
-    color: #494949;
-    font-weight: 700;
-}
-
-.booking,
-.enquiry,
-.call-back {
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #dadada;
+  font-size: 19px;
+  margin-bottom: 20px;
+  color: #494949;
+  font-weight: 700;
 }
 
 .call-back.recommended-package {
-    border: none;
+  border: none;
 }
 
 .booking ul {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .booking ul li {
-    list-style-type: none;
-    padding-bottom: 10px;
-    font-size: 13px;
-    cursor: pointer;
-    overflow-wrap: break-word;
+  list-style-type: none;
+  padding-bottom: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  overflow-wrap: break-word;
 }
 
 .booking ul li a {
-    color: #777;
-    text-decoration: none;
-    -webkit-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease;
+  color: #777;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .booking ul li span {
-    width: 20px;
-    display: inline-block;
+  width: 20px;
+  // margin-right: 5px;
+  display: inline-block;
 }
 
 .booking ul li i {
-    color: #21b5ff;
+  color: #21b5ff;
 }
 
 .booking li a:hover {
-    opacity: 0.75;
+  opacity: 0.75;
 }
 
-.form-control {
-    height: 40px;
-    font-size: 14px;
+.enquiry .custom-field {
+  // background: 0 0;
+  // border-top: none;
+  // border-left: none;
+  // border-right: none;
 }
-
 
 .call-back-btn {
-    background: #21b5ff;
+  background: #21b5ff;
 }
 
+// .destination-wrapper .pricing span {
+//     display: block;
+//     margin: 5px 0;
+// }
+// .destination-wrapper .item-detail .pricing span:last-child {
+//     float: right;
+// }
 
+/* booking form popup modal */
 
 .booking-form button.btn {
-    -webkit-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .booking-form button.btn:hover {
-    -webkit-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .booking-form .modal-header h5 {
-    text-align: center;
-    font-weight: 700;
+  text-align: center;
+  font-weight: 700;
 }
 
 button.close {
-    padding: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 10px;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
 }
 
 .modal-header {
-    background: #21b5ff;
+  background: #21b5ff;
 }
 
 .modal-header h5 {
-    font-size: 26px;
+  font-size: 26px;
 }
 
 .trip-wrapper {
-    padding: 20px 30px;
+  padding: 20px 30px;
 }
 
 .booking-form label {
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 label.travel-date {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .form-group.row .col-md-6,
 .form-group .col-md-6 {
-    padding: 0 !important;
+  padding: 0 !important;
 }
 
 .sub-title {
-    font-size: 18px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .form-control {
-    height: 40px;
-    font-size: 14px;
+  height: 40px;
+  font-size: 14px;
+  background: none;
 }
 
 .form-check {
-    position: relative;
-    display: block;
-    padding-left: 12px;
+  position: relative;
+  display: block;
+  padding-left: 12px;
 }
 
 .form-check {
-    padding-left: 0;
-    margin-bottom: 1rem;
+  padding-left: 0;
+  margin-bottom: 1rem;
 }
 
 .pull-right {
-    float: right;
+  float: right;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.startdateError {
-    color: red;
+.traveler-no,
+.trip-detail {
+  // display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
 }
-
 
 .traveler-no .form-group,
 .trip-detail .form-group,
 {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 48%;
-    flex: 0 0 48%;
-    max-width: 48%;
-    margin-right: 10px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 48%;
+  flex: 0 0 48%;
+  max-width: 48%;
+  margin-right: 10px;
 }
 
 .trip-wrapper .travel-date {
-    margin-bottom: 2em;
-    margin-right: 20px;
-}
-
-.text-sucess {
-    color: green;
-}
-
-.text-danger {
-    color: red;
+  margin-bottom: 2em;
+  margin-right: 20px;
 }
 
 @media (max-width: 768px) {
-    .traveler-no .form-group,
-
-   .trip-detail .form-group,
-    {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-        flex: 0 0 100%;
-        max-width: 100%;
-        margin-right: 0;
-
-   }
-    .trip-wrapper .travel-date {
-
-       margin-right: 0;
-    }
+  .traveler-no .form-group,
+  .trip-detail .form-group,
+  {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-right: 0;
+  }
+  .trip-wrapper .travel-date {
+      margin-right: 0;
+  }
+  .tour-brief ul li span.pull-right {
+      width: 100%;
+      float: none;
+  }
 }
